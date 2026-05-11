@@ -1,0 +1,13 @@
+---
+interface Props {
+  variant?: "default" | "mint" | "red";
+  sub?: string;
+  class?: string;
+}
+const { variant = "default", sub, class: extra = "" } = Astro.props;
+const variantClass = variant === "mint" ? "glow-mint" : variant === "red" ? "glow-red" : "";
+---
+<div class:list={["chart-box w-full max-w-xs", variantClass, extra]}>
+  <slot />
+  {sub && <div class="text-[10px] text-zinc-500 font-normal italic mt-1">{sub}</div>}
+</div>

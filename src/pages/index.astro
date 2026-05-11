@@ -1,0 +1,219 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTag from "../components/SectionTag.astro";
+import CalButton from "../components/CalButton.astro";
+import { getLatestPosts, formatDate } from "../content/posts";
+
+const featured = getLatestPosts(2);
+---
+<BaseLayout
+  title="Limitless Potentia — Recalibrate Your Internal Operating System"
+  description="Limitless Potentia helps senior leaders, founders, and high performers recalibrate the internal mechanism that governs their performance under pressure. Map your system. Reclaim your bandwidth."
+>
+  <!-- Hero -->
+  <section
+    id="hero"
+    class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-24 pb-20 relative overflow-hidden"
+  >
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(152,255,217,0.06)_0%,transparent_70%)] pointer-events-none"
+    >
+    </div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <div class="animate-hero-1 opacity-0 mb-10">
+        <span
+          class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-mint/20 bg-mint/5 text-mint text-[11px] font-bold tracking-widest uppercase"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-mint animate-pulse shadow-[0_0_8px_rgba(152,255,217,0.8)]"
+          ></span>
+          Performance Recalibration for Leaders
+        </span>
+      </div>
+
+      <h1
+        class="animate-hero-2 opacity-0 text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-[1.05]"
+      >
+        Recalibrate Your<br />
+        <span class="shimmer-text">Internal Operating System</span>
+      </h1>
+
+      <p
+        class="animate-hero-3 opacity-0 text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto mb-14 font-medium leading-relaxed"
+      >
+        The mechanism most high performers never see —<br class="hidden sm:block" />
+        <span class="text-white">until it's already compounded.</span>
+      </p>
+
+      <div
+        class="animate-hero-4 opacity-0 flex flex-col sm:flex-row gap-5 justify-center items-center"
+      >
+        <CalButton label="Get Your Custom Map" size="md" />
+        <a
+          href="/blog"
+          class="btn-secondary px-12 py-5 rounded-full text-sm uppercase tracking-widest font-bold cursor-pointer no-underline"
+        >
+          Read the Writing
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-hero-4 opacity-0"
+    >
+      <span class="text-zinc-600 text-[10px] uppercase tracking-widest font-bold">Scroll</span>
+      <div class="w-[1px] h-8 bg-gradient-to-b from-zinc-600 to-transparent pulse-line-anim"></div>
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section id="what" class="max-w-4xl mx-auto px-6 py-24">
+    <div class="grid md:grid-cols-5 gap-12 items-center">
+      <div class="md:col-span-3 space-y-8">
+        <SectionTag label="What This Is" />
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight leading-tight">
+          You handle pressure well.<br />
+          <span class="text-mint italic">Here's what it's costing you.</span>
+        </h2>
+        <div class="space-y-5 text-zinc-400 leading-relaxed">
+          <p>
+            Limitless Potentia is performance recalibration for the people other people rely on.
+            Founders, senior leaders, high performers — anyone whose career was built on staying
+            functional when the stakes are high.
+          </p>
+          <p>
+            We don't run another protocol on top of you. We map the mechanism already running
+            underneath, and recalibrate the calculation at the source.
+          </p>
+        </div>
+        <a
+          href="/blog/the-mechanism"
+          class="inline-flex items-center gap-3 text-mint font-bold text-sm uppercase tracking-widest hover:gap-5 transition-all duration-300 no-underline group"
+        >
+          Read the full mechanism
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="md:col-span-2 card-blur border-white/10 p-2 shadow-lg relative overflow-hidden">
+        <img
+          src="/me.jpg"
+          alt="Ankit — Founder of Limitless Potentia"
+          class="w-full h-full object-cover rounded-2xl opacity-90 shadow-[0_0_30px_rgba(255,255,255,0.05)]"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Who it's for -->
+  <section id="who" class="max-w-5xl mx-auto px-6 py-24">
+    <div class="text-center mb-16">
+      <SectionTag label="Who It's For" />
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight">
+        Built for People Who Don't <span class="text-mint italic">Fold.</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-8 card-blur space-y-4">
+        <div class="text-mint font-black tracking-widest uppercase text-xs">Founders</div>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          You've built something real. The pressure scaled with it. The internal mechanism didn't —
+          and now it's running you instead of the other way around.
+        </p>
+      </div>
+      <div class="p-8 card-blur border-mint/30 bg-mint/5 shadow-[0_0_30px_rgba(152,255,217,0.08)] space-y-4">
+        <div class="text-mint font-black tracking-widest uppercase text-xs">Senior Leaders</div>
+        <p class="text-zinc-300 text-sm leading-relaxed">
+          Decisions compound. Your bandwidth doesn't. You operate at a level where the cost of
+          low-quality state isn't visible until quarters later.
+        </p>
+      </div>
+      <div class="p-8 card-blur space-y-4">
+        <div class="text-mint font-black tracking-widest uppercase text-xs">High Performers</div>
+        <p class="text-zinc-400 text-sm leading-relaxed">
+          You've optimised the obvious. The remaining gains aren't in another protocol — they're in
+          the calibration of the system that runs every protocol you already have.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured writing -->
+  <section id="writing" class="max-w-5xl mx-auto px-6 py-24">
+    <div class="flex items-end justify-between mb-12">
+      <div>
+        <SectionTag label="The Writing" />
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight">Read the Mechanism</h2>
+      </div>
+      <a
+        href="/blog"
+        class="hidden sm:inline-flex items-center gap-3 text-zinc-400 hover:text-mint font-bold text-xs uppercase tracking-widest transition-colors no-underline"
+      >
+        All posts
+        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      {featured.map((post) => (
+        <a
+          href={`/blog/${post.slug}`}
+          class="p-8 card-blur hover:border-mint/30 transition-colors duration-300 group no-underline block"
+        >
+          <div class="flex items-center gap-3 mb-5 text-xs uppercase tracking-widest">
+            {post.tag && <span class="text-mint font-bold">{post.tag}</span>}
+            {post.tag && <span class="text-zinc-700">•</span>}
+            <span class="text-zinc-600 font-medium">{post.readMinutes} min read</span>
+          </div>
+          <h3 class="text-2xl font-black mb-4 tracking-tight group-hover:text-mint transition-colors">
+            {post.title}
+          </h3>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-5">{post.description}</p>
+          <div class="flex items-center justify-between pt-5 border-t border-white/5">
+            <span class="text-zinc-600 text-xs uppercase tracking-widest font-bold">
+              {formatDate(post.pubDate)}
+            </span>
+            <span class="text-mint text-xs uppercase tracking-widest font-bold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+              Read
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta-section" class="max-w-4xl mx-auto px-6 py-32 text-center">
+    <h2 class="text-4xl md:text-6xl font-black leading-tight mb-8">
+      Ready to Map<br />
+      <span class="text-mint">Your System?</span>
+    </h2>
+
+    <p class="text-zinc-400 text-lg max-w-xl mx-auto mb-6 leading-relaxed">
+      In one conversation, we'll map your specific triggers, identify which zone you're spending
+      most of your time in, and pinpoint exactly where the bandwidth is leaking.
+    </p>
+
+    <p
+      class="text-mint font-black tracking-[0.2em] uppercase text-sm md:text-base mb-12 drop-shadow-[0_0_15px_rgba(152,255,217,0.4)]"
+    >
+      Your Data. Your System. Your Map.
+    </p>
+
+    <div class="flex flex-col items-center gap-6">
+      <CalButton label="Get Your Custom Map" size="lg" />
+      <span class="text-zinc-600 text-xs uppercase tracking-widest font-bold">
+        45-minute discovery call · No commitment
+      </span>
+    </div>
+  </section>
+</BaseLayout>

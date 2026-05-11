@@ -1,0 +1,26 @@
+---
+interface Props {
+  variant: "mint" | "red";
+  title: string;
+  items: string[];
+}
+const { variant, title, items } = Astro.props;
+const colorClass = variant === "mint" ? "text-mint" : "text-red-500";
+const arrow = variant === "mint" ? "↑" : "↓";
+---
+<div class:list={["biology-card w-full space-y-3", variant]}>
+  <div
+    class:list={[
+      "text-center font-bold text-xs uppercase underline underline-offset-4",
+      colorClass,
+      variant === "mint" ? "decoration-mint/30" : "decoration-red-500/30",
+    ]}
+  >
+    {title}
+  </div>
+  <ul class="text-[10px] text-zinc-400 space-y-2 list-disc pl-4 text-left">
+    {items.map((item) => (
+      <li set:html={item.replace("{arrow}", `<span class='${colorClass} font-bold'>${arrow}</span>`)} />
+    ))}
+  </ul>
+</div>

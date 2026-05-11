@@ -1,0 +1,26 @@
+---
+interface Props {
+  label?: string;
+  size?: "sm" | "md" | "lg";
+  class?: string;
+}
+const { label = "Get Your Custom Map", size = "md", class: extra = "" } = Astro.props;
+const sizes = {
+  sm: "px-6 py-2.5 text-xs",
+  md: "px-12 py-5 text-sm",
+  lg: "px-16 py-6 text-lg",
+};
+---
+<button
+  data-cal-link="aankitm/45mins"
+  data-cal-namespace="45mins"
+  data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+  class:list={[
+    "btn-primary rounded-full uppercase tracking-widest font-black cursor-pointer transition-all",
+    sizes[size],
+    "shadow-[0_0_20px_rgba(152,255,217,0.3)] hover:shadow-[0_0_40px_rgba(152,255,217,0.5)]",
+    extra,
+  ]}
+>
+  {label}
+</button>

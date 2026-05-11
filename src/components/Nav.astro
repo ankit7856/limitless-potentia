@@ -1,0 +1,43 @@
+---
+interface Props {
+  ctaTarget?: string;
+  ctaLabel?: string;
+}
+const { ctaTarget = "#cta-section", ctaLabel = "Get Your Custom Map" } = Astro.props;
+---
+<nav
+  id="main-nav"
+  class="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-xl border-b border-white/5 transition-all duration-300"
+>
+  <a href="/" class="flex items-center gap-3 no-underline">
+    <div class="w-10 h-10 flex items-center justify-center">
+      <img src="/logo-small.svg" alt="Limitless Potentia logo" class="w-full h-full text-mint" />
+    </div>
+    <div class="flex flex-col text-mint">
+      <span class="font-black tracking-[0.2em] text-sm leading-none">LIMITLESS</span>
+      <span class="font-medium tracking-[0.2em] text-[10px] leading-none mt-1">POTENTIA</span>
+    </div>
+  </a>
+  <div class="flex items-center gap-6">
+    <a
+      href="/blog"
+      class="hidden sm:inline-block text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-bold transition-colors duration-300 no-underline"
+      >Blog</a
+    >
+    <a
+      href={ctaTarget}
+      class="btn-primary px-6 py-2.5 rounded-full text-xs uppercase tracking-widest cursor-pointer"
+      >{ctaLabel}</a
+    >
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById("main-nav");
+  if (nav) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) nav.classList.add("bg-black/60");
+      else nav.classList.remove("bg-black/60");
+    });
+  }
+</script>

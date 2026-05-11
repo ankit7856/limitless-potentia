@@ -1,0 +1,1051 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionTag from "../../components/SectionTag.astro";
+import CalButton from "../../components/CalButton.astro";
+import { getPost, formatDate } from "../../content/posts";
+
+const post = getPost("the-mechanism")!;
+---
+<BaseLayout
+  title={`${post.title} | Limitless Potentia`}
+  description={post.description}
+  navCtaTarget="#contact"
+  navCtaLabel="Get Your Custom Map"
+>
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-24">
+    <div class="mb-10 relative">
+      <div
+        class="w-24 h-24 rounded-full border border-mint/20 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md"
+      >
+        <img src="/logo-small.svg" alt="Limitless Potentia logo" class="w-12 h-12 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.6)]" />
+      </div>
+    </div>
+    <div class="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-4">
+      {post.tag} · {formatDate(post.pubDate)} · {post.readMinutes} min read
+    </div>
+    <h1 class="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6 max-w-5xl leading-[1.05]">
+      You Handle Pressure Well.<br />
+      <span class="text-mint italic">Here's What It's Costing You.</span>
+    </h1>
+    <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mb-12 font-medium leading-relaxed">
+      The mechanism most senior leaders never see — <span class="text-white">until it's already compounded.</span>
+    </p>
+    <div class="flex flex-col sm:flex-row gap-5">
+      <CalButton label="Get Your Custom Map" size="md" />
+    </div>
+  </section>
+
+  <main id="document-start" class="max-w-4xl mx-auto px-6 py-20">
+    <!-- Opening Narrative -->
+    <article class="space-y-10 mb-32">
+      <div class="space-y-8 text-zinc-300 text-xl leading-[1.6]">
+        <p class="font-semibold text-white">You handle pressure well.</p>
+        <p>You always have. That's not in question — it's literally why you're where you are.</p>
+        <p>Most people fold under the conditions you operate in daily. You don't. You've built a career on staying functional when the stakes are high.</p>
+        <p class="text-white font-medium">But the question isn't whether you can handle it.</p>
+
+        <div class="mt-8 max-w-2xl mx-auto p-6 md:p-8 bg-red-500/5 rounded-2xl border border-red-500/30 shadow-[0_0_30px_rgba(255,77,77,0.15)] relative overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50"></div>
+          <p class="text-lg md:text-xl text-white font-black leading-tight text-center">
+            The question is what handling it this way is <span class="text-red-400">actually costing you.</span>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Before you begin -->
+    <section class="mb-32">
+      <SectionTag label="Before you begin" />
+      <div class="grid md:grid-cols-5 gap-12">
+        <div class="md:col-span-3 space-y-6 text-zinc-400 leading-relaxed">
+          <p>A year ago, I had everything a coach is supposed to have — clients, credibility, and an identity built around not cracking under pressure.</p>
+          <p>Then everything collapsed at once. Lost £30k. Lost the relationship. Had to ask my father for money — the one thing I'd sworn I'd never do.</p>
+          <p>And I did what I'd always done: <span class="text-white font-bold italic">pushed harder.</span></p>
+          <p>It didn't work. The harder I pushed, the louder it got. One night, I stopped and asked a question I hadn't asked once: <span class="text-white">Why am I fighting with myself?</span></p>
+          <div class="pt-4 border-t border-white/5">
+            <p class="text-zinc-200 font-medium italic text-lg leading-relaxed">"The situation hadn't changed. The calculation had. That wasn't a mindset shift. It was a miscalibrated equation being corrected."</p>
+          </div>
+        </div>
+        <div class="md:col-span-2 flex flex-col justify-center items-center card-blur border-white/10 min-h-[250px] relative overflow-hidden bg-zinc-900/30 p-2 shadow-lg">
+          <img src="/me.jpg" alt="Ankit — Founder of Limitless Potentia" class="w-full h-full object-cover rounded-2xl opacity-90 shadow-[0_0_30px_rgba(255,255,255,0.05)]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Part 1: Equation -->
+    <section class="mb-32 space-y-12">
+      <div>
+        <SectionTag label="Part 1" />
+        <h2 class="text-4xl font-black mb-6">The Equation Your Brain Runs on Every Decision</h2>
+        <p class="text-zinc-400 text-lg">Your brain is not primarily a thinking machine. It's a <span class="text-mint font-bold">prediction machine</span>.</p>
+      </div>
+
+      <div class="space-y-8 text-zinc-300 text-lg leading-relaxed">
+        <p>Every time you face a situation — a board meeting, a difficult hire, a market shift — before you consciously process anything, your brain runs a fast calculation:</p>
+      </div>
+
+      <!-- Flowchart -->
+      <div class="py-10 max-w-4xl mx-auto">
+        <div class="relative card-blur p-6 md:p-12 border-white/5 overflow-hidden">
+          <div class="flex flex-col items-center pb-8">
+            <div class="text-mint font-black tracking-widest text-xs uppercase mb-8">How Your Brain Decides: Threat vs Challenge</div>
+
+            <div class="chart-box w-full max-w-xs">
+              SITUATION OCCURS
+              <div class="text-[10px] text-zinc-500 font-normal">Quarterly miss, team conflict, market crash</div>
+            </div>
+
+            <div class="connector"></div>
+            <div class="arrow-head"></div>
+
+            <div class="chart-box w-full max-w-xs">APPRAISAL SYSTEM ACTIVATES</div>
+
+            <div class="connector"></div>
+            <div class="arrow-head"></div>
+
+            <div class="relative w-full flex flex-col items-center max-w-lg mx-auto">
+              <div class="chart-box w-[200px] md:w-full max-w-xs relative">
+                PRIMARY APPRAISAL
+                <div class="text-[10px] text-zinc-400 font-normal italic">"Does this matter to me?"</div>
+                <div class="absolute top-1/2 left-full -translate-y-1/2 flex items-center z-10">
+                  <div class="w-6 md:w-12 h-[2px] bg-white/10"></div>
+                  <div class="text-[9px] md:text-[10px] text-zinc-500 px-1.5 font-bold tracking-widest">NO</div>
+                  <div class="chart-box opacity-60 text-[9px] md:text-[10px] text-left whitespace-nowrap p-2 ml-1">
+                    NO STRESS<br /><span class="font-normal text-zinc-400">(Irrelevant)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="connector"></div>
+            <div class="text-[10px] text-mint font-bold py-1">YES</div>
+            <div class="arrow-head"></div>
+
+            <div class="chart-box w-[200px] md:w-full max-w-xs border-mint/40">
+              SECONDARY APPRAISAL
+              <div class="text-[10px] text-zinc-400 font-normal italic">"Do I have resources to handle it?"</div>
+            </div>
+
+            <div class="w-[2px] h-4 bg-white/10 mx-auto"></div>
+
+            <div class="w-full grid grid-cols-2 gap-4 md:gap-12 mt-0 relative">
+              <div class="flex flex-col items-center relative">
+                <div class="absolute right-[-0.5rem] md:right-[-1.5rem] top-0 w-[calc(50%+0.5rem)] md:w-[calc(50%+1.5rem)] h-[2px] bg-white/10"></div>
+                <div class="flex flex-col items-center w-full relative">
+                  <div class="w-[2px] h-8 bg-white/10 relative">
+                    <div class="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] text-red-500 font-bold uppercase">No</div>
+                  </div>
+                  <div class="arrow-head -mt-[1px] mb-2"></div>
+                </div>
+                <div class="chart-box glow-red text-red-500 w-full uppercase">Threat Response</div>
+                <div class="connector bg-red-500/30"></div>
+                <div class="biology-card red w-full space-y-3">
+                  <div class="text-center font-bold text-xs uppercase text-red-500 underline decoration-red-500/30 underline-offset-4">Biology B</div>
+                  <ul class="text-[10px] text-zinc-400 space-y-2 list-disc pl-4 text-left">
+                    <li>Amygdala hijacks</li>
+                    <li>Cortisol = poison</li>
+                    <li>Energy <span class="text-red-400 font-bold">↓</span></li>
+                    <li>Panic, scattered focus</li>
+                    <li>Performance collapses</li>
+                  </ul>
+                </div>
+                <div class="connector bg-red-500/30"></div>
+                <div class="chart-box border-red-500/30 text-[10px] uppercase">Survival Mindset</div>
+                <div class="connector bg-red-500/30"></div>
+                <div class="text-[10px] text-zinc-500 italic p-3 border border-red-500/20 rounded-lg text-center w-full max-w-[160px]">
+                  Reinforces:<br />"I can't handle this"
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center relative">
+                <div class="absolute left-[-0.5rem] md:left-[-1.5rem] top-0 w-[calc(50%+0.5rem)] md:w-[calc(50%+1.5rem)] h-[2px] bg-white/10"></div>
+                <div class="flex flex-col items-center w-full relative">
+                  <div class="w-[2px] h-8 bg-white/10 relative">
+                    <div class="absolute left-3 top-1/2 -translate-y-1/2 text-[10px] text-mint font-bold uppercase">Yes</div>
+                  </div>
+                  <div class="arrow-head -mt-[1px] mb-2"></div>
+                </div>
+                <div class="chart-box glow-mint text-mint w-full uppercase">Challenge Response</div>
+                <div class="connector bg-mint/30"></div>
+                <div class="biology-card mint w-full space-y-3">
+                  <div class="text-center font-bold text-xs uppercase text-mint underline decoration-mint/30 underline-offset-4">Biology A</div>
+                  <ul class="text-[10px] text-zinc-400 space-y-2 list-disc pl-4 text-left">
+                    <li>Prefrontal cortex in control</li>
+                    <li>Cortisol = fuel</li>
+                    <li>Energy <span class="text-mint font-bold">↑</span></li>
+                    <li>Focus sharp</li>
+                    <li>Performance improves</li>
+                  </ul>
+                </div>
+                <div class="connector bg-mint/30"></div>
+                <div class="chart-box border-mint/30 glow-mint text-mint text-[10px] uppercase">Growth Mindset</div>
+                <div class="connector bg-mint/30"></div>
+                <div class="text-[10px] text-white font-medium italic p-3 border border-mint/20 rounded-lg text-center w-full max-w-[160px]">
+                  Reinforces:<br />"I can handle this"
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12 p-4 bg-zinc-900/50 rounded-full border border-white/5 text-[10px] font-bold tracking-widest text-zinc-600 uppercase flex items-center gap-4">
+              <div class="w-2 h-2 rounded-full bg-zinc-700 animate-pulse"></div>
+              Self-Fulfilling Prophecy Loop
+              <div class="w-2 h-2 rounded-full bg-zinc-700 animate-pulse"></div>
+            </div>
+          </div>
+          <div class="absolute bottom-4 right-6 flex items-center gap-1.5 text-[10px] text-zinc-500 italic">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            Lazarus &amp; Folkman (1984) — Cognitive appraisal model
+          </div>
+        </div>
+      </div>
+
+      <div class="p-12 card-blur text-center space-y-6 mt-6">
+        <div class="text-5xl md:text-7xl font-black tracking-tighter text-white">PT <span class="text-zinc-700">vs.</span> PR</div>
+        <p class="text-zinc-500 uppercase tracking-[0.3em] font-bold text-xs">Perceived Threat vs. Perceived Resources</p>
+        <div class="grid md:grid-cols-2 gap-8 pt-10 text-left">
+          <div class="space-y-3">
+            <div class="text-mint font-bold">If PR &gt; PT (Resources exceed threat):</div>
+            <p class="text-zinc-400 text-sm">Challenge zone. Clean mobilisation. Focused, sharp, decisive.</p>
+          </div>
+          <div class="space-y-3">
+            <div class="text-red-400 font-bold">If PT &gt; PR (Threat exceeds resources):</div>
+            <p class="text-zinc-400 text-sm">Protection mode. System reprioritises from optimal performance to survival.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6 text-zinc-300">
+        <p>Notice something? It's not about how hard the situation actually is. It's about how your brain has <span class="text-white font-bold">calculated</span> it.</p>
+        <div class="p-6 bg-white/5 rounded-2xl border border-white/10">
+          <p class="text-sm italic text-zinc-400">The stress response doesn't trigger because a situation is objectively hard. It triggers when your brain calculates that <span class="text-white font-bold">demand exceeds your perceived control</span>.</p>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="overflow-x-auto card-blur">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="border-b border-white/10">
+              <th class="p-6 text-zinc-500 uppercase font-black text-[10px] tracking-widest">Metric</th>
+              <th class="p-6 text-white uppercase font-black text-[10px] tracking-widest">Leader A</th>
+              <th class="p-6 text-white uppercase font-black text-[10px] tracking-widest">Leader B</th>
+            </tr>
+          </thead>
+          <tbody class="text-zinc-300">
+            <tr class="border-b border-white/5">
+              <td class="p-6 font-medium">Perceived Threat</td>
+              <td class="p-6">7 / 10</td>
+              <td class="p-6">8 / 10</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-6 font-medium">Perceived Resources</td>
+              <td class="p-6 text-mint font-bold">9 / 10</td>
+              <td class="p-6 text-red-400 font-bold">5 / 10</td>
+            </tr>
+            <tr class="border-b border-white/5">
+              <td class="p-6 font-medium">Gap</td>
+              <td class="p-6 text-mint">−2 → challenge zone (clean)</td>
+              <td class="p-6 text-red-500 font-bold">+3 → protection mode (split)</td>
+            </tr>
+            <tr>
+              <td class="p-6 font-medium">Result</td>
+              <td class="p-6 text-white">Sharp, decisive, fast recovery</td>
+              <td class="p-6 text-zinc-500">Narrowing, defensive filtering, latency</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-zinc-400 italic leading-relaxed mt-6">
+        Same stakes. Same role. Completely different internal state and output quality — even if both leave the room looking composed.<br /><br />
+        <span class="text-white font-bold">The key point:</span> the nervous system doesn't respond to reality. It responds to perceived instability. A highly competent executive can still tip into protection mode if their sense of control drops, because of identity exposure, unpredictability, or accumulated load from previous events.
+      </p>
+    </section>
+
+    <!-- Part 2 -->
+    <section class="mb-20 space-y-12">
+      <div>
+        <SectionTag label="Part 2" />
+        <h2 class="text-4xl font-black mb-6">The Variable Nobody Tracks</h2>
+        <p class="text-zinc-400">Performance under pressure doesn't just depend on how much pressure you're under. It depends on <span class="text-white font-bold italic">two things simultaneously:</span></p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-8 card-blur flex flex-col justify-between">
+          <div class="text-3xl font-black text-white mb-4">01</div>
+          <p class="text-zinc-300 font-bold">The load you're carrying.</p>
+        </div>
+        <div class="p-8 card-blur flex flex-col justify-between border-mint/20">
+          <div class="text-3xl font-black text-mint mb-4">02</div>
+          <p class="text-zinc-300 font-bold">How stable your internal regulation is while carrying it.</p>
+        </div>
+      </div>
+
+      <div class="space-y-6 text-zinc-300 text-lg leading-relaxed">
+        <p>High pressure + internal stability → <span class="text-white font-bold">full capacity, fast recovery, clean decisions.</span></p>
+        <p>High pressure + internal instability → <span class="text-white font-bold">split bandwidth, degraded output, slow recovery.</span></p>
+        <p>Same pressure level. Completely different result. The variable that changes everything isn't the workload — it's the regulation underneath it.</p>
+        <p>Think of it as two axes:</p>
+        <ul class="space-y-2 list-none text-zinc-400">
+          <li><span class="text-white font-bold">Horizontal axis → Load</span> (the level of demand you're operating under)</li>
+          <li><span class="text-white font-bold">Vertical axis → Regulation</span> (your internal stability at that load)</li>
+        </ul>
+        <p>This gives you four states:</p>
+      </div>
+
+      <!-- Matrix Graph -->
+      <div class="flex items-stretch max-w-3xl mx-auto mt-12 pb-8">
+        <div class="w-16 flex flex-col justify-between items-center py-8 pr-6 border-r-2 border-white/20 relative">
+          <div class="absolute left-[-2.5rem] top-1/2 -translate-y-1/2 -rotate-90 whitespace-nowrap text-[10px] font-black text-zinc-500 uppercase tracking-widest">Regulation (Stability Level)</div>
+          <span class="text-[10px] font-black text-emerald-400 uppercase tracking-widest -rotate-90 origin-center mb-6">Stable</span>
+          <span class="text-[10px] font-black text-red-500 uppercase tracking-widest -rotate-90 origin-center mt-6">Unstable</span>
+        </div>
+        <div class="flex-1 flex flex-col pl-6">
+          <div class="grid grid-cols-2 gap-4 border-b-2 border-white/20 pb-6">
+            <div class="p-6 card-blur h-48 flex flex-col justify-end border-emerald-500/20">
+              <div class="text-emerald-400 font-black mb-1 tracking-widest uppercase text-[10px]">Maintenance</div>
+              <p class="text-zinc-400 text-[10px] leading-tight">Low stimulation, calm baseline.</p>
+            </div>
+            <div class="p-6 card-blur h-48 flex flex-col justify-end bg-mint/10 border-mint/50 shadow-[0_0_40px_rgba(152,255,217,0.35)] relative overflow-hidden z-10">
+              <div class="absolute inset-0 bg-gradient-to-tr from-mint/10 to-transparent"></div>
+              <div class="relative z-10">
+                <div class="text-mint font-black mb-1 tracking-widest uppercase text-[10px] drop-shadow-[0_0_8px_rgba(152,255,217,0.8)]">Expansion ✨</div>
+                <p class="text-white font-bold text-[10px] leading-tight">High load, full control.</p>
+                <p class="text-mint/70 font-medium text-[8px] mt-1 italic">Elite operators engineer this state.</p>
+              </div>
+            </div>
+            <div class="p-6 card-blur h-48 flex flex-col justify-end border border-dashed border-zinc-700 bg-zinc-900/30">
+              <div class="text-zinc-400 font-black mb-1 tracking-widest uppercase text-[10px]">Anxiety</div>
+              <p class="text-zinc-400 text-[10px] leading-tight">Restless with no direction.</p>
+            </div>
+            <div class="p-6 card-blur h-48 flex flex-col justify-end border-red-500/20">
+              <div class="text-red-500 font-black mb-1 tracking-widest uppercase text-[10px]">Chaotic Survival 🔥</div>
+              <p class="text-zinc-400 text-[10px] leading-tight">Overwhelmed, no structure.</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center pt-4 relative">
+            <span class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">Low</span>
+            <span class="text-[10px] font-black text-zinc-500 uppercase tracking-widest absolute left-1/2 -translate-x-1/2">Load (Demand Level)</span>
+            <span class="text-[10px] font-black text-zinc-500 uppercase tracking-widest">High</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-8 text-zinc-300 text-lg leading-relaxed pt-10">
+        <div class="text-xs text-zinc-500 flex items-center gap-2 italic">McEwen (1998) — Allostatic load</div>
+        <p>The sweet spot isn't less pressure. It's <span class="text-white font-bold">high load with stable regulation,</span> full mobilisation, no bandwidth split, fast recovery.</p>
+        <p class="text-mint font-bold">This is where capacity actually grows.</p>
+        <p>Here's what that means practically: you can be operating at the absolute edge of your capacity and feel calm doing it.</p>
+        <div class="p-8 bg-zinc-900/40 rounded-3xl border border-white/5 space-y-4 italic">
+          <p>"Calm isn't low output. It's not low intensity either. It's a regulated state — meaning your system is running everything through one channel instead of two. Most high-performers have never experienced this."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Part 3: Zone Carousel -->
+    <section id="zone-scroll-container" class="relative z-10 mb-12" style="height: 180vh;">
+      <div class="sticky top-24 md:top-32 w-full flex flex-col justify-start items-center">
+        <div class="w-full max-w-4xl mx-auto px-6 flex flex-col justify-center">
+          <div id="zone-header" class="mb-8 md:mb-12 shrink-0">
+            <SectionTag label="Part 3" />
+            <h2 class="text-3xl md:text-4xl font-black mb-4">The Three Zones</h2>
+            <p class="text-zinc-400 text-base md:text-lg">Your performance system operates across three zones based on the PT vs PR gap. Each one is telling you something specific.</p>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-8 items-start w-full">
+            <div class="flex md:flex-col justify-center items-center gap-4 md:w-16 pt-2 md:pt-10 mx-auto md:mx-0 shrink-0">
+              <div class="regulator-dot active" data-zone="0"></div>
+              <div class="regulator-line hidden md:block"></div>
+              <div class="regulator-dot" data-zone="1"></div>
+              <div class="regulator-line hidden md:block"></div>
+              <div class="regulator-dot" data-zone="2"></div>
+            </div>
+
+            <div class="zone-carousel-container w-full">
+              <div class="zone-card card-blur p-6 md:p-12 border-blue-500/20" data-state="active">
+                <div class="flex items-center gap-4 mb-4 md:mb-6">
+                  <div class="text-blue-400 font-black tracking-widest uppercase text-base md:text-lg">Underload</div>
+                  <div class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-[10px] font-bold tracking-widest">PR &gt;&gt; PT</div>
+                </div>
+                <div class="space-y-4 md:space-y-6">
+                  <p class="text-zinc-300 font-medium italic text-sm md:text-base">Resources far exceed demand. System feels flat, under-stimulated. This is where your brain is <span class="text-blue-400 font-bold">most creative</span>.</p>
+                  <ul class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-blue-500/50">
+                    <li>Broad perception</li>
+                    <li>Open pattern recognition</li>
+                    <li>Novel connections</li>
+                    <li>Long-range strategic thinking</li>
+                  </ul>
+                  <div class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
+                    <p class="mb-2">It's why the best ideas come in the shower, on a walk, at 6 am before the noise starts.</p>
+                    <p>It's why great artists and architects do their best generative work in calm, unhurried environments — they're not being lazy, they're in the zone where the brain has full access to its creative bandwidth.</p>
+                  </div>
+                  <div class="pt-4 border-t border-white/10">
+                    <p class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase">
+                      <span class="text-white">Reveals:</span> Your current creative and strategic ceiling — what your system can generate when it's not in resource-protection mode.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="zone-card card-blur p-6 md:p-12 border-mint/20" data-state="next">
+                <div class="flex items-center gap-4 mb-4 md:mb-6">
+                  <div class="text-mint font-black tracking-widest uppercase text-base md:text-lg">Challenge Zone</div>
+                  <div class="px-3 py-1 rounded-full bg-mint/10 text-mint text-[10px] font-bold tracking-widest">PR ≈ PT</div>
+                </div>
+                <div class="space-y-4 md:space-y-6">
+                  <p class="text-zinc-300 font-medium italic text-sm md:text-base">High demand, stable perception. The nervous system mobilises fully. This is where your brain is <span class="text-mint font-bold">most competitive</span>.</p>
+                  <ul class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-mint/50">
+                    <li>Focus sharpens</li>
+                    <li>Energy moves</li>
+                    <li>Decisions are clean</li>
+                    <li>No identity threat. No bandwidth split.</li>
+                  </ul>
+                  <div class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
+                    <p class="text-white font-medium mb-2">Executing strategy | Using pattern libraries | Pushing hard | Getting fast feedback.</p>
+                    <p>Think elite athletes at their best: they aren't doing anything fundamentally new in competition. They're deploying existing skills and patterns under pressure with maximum efficiency.</p>
+                  </div>
+                  <div class="pt-4 border-t border-white/10">
+                    <p class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase">
+                      <span class="text-white">Reveals:</span> Your current performance tolerance — the ceiling you can operate at cleanly right now.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="zone-card card-blur p-6 md:p-12 border-red-500/20" data-state="prev">
+                <div class="flex items-center gap-4 mb-4 md:mb-6">
+                  <div class="text-red-500 font-black tracking-widest uppercase text-base md:text-lg">Overload / Protection</div>
+                  <div class="px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-[10px] font-bold tracking-widest">PT &gt; PR</div>
+                </div>
+                <div class="space-y-4 md:space-y-6">
+                  <p class="text-zinc-300 font-medium italic text-sm md:text-base">This is where <span class="text-red-500 font-bold">all internal friction</span> lives. The system shifts priority from the task to personal protection.</p>
+                  <ul class="grid grid-cols-2 gap-2 md:gap-3 text-xs md:text-sm text-zinc-400 list-disc pl-4 marker:text-red-500/50">
+                    <li>Brain-fog &amp; Heaviness</li>
+                    <li>Second-guessing</li>
+                    <li>Perception narrows &amp; Risk tightens</li>
+                    <li>Stress doesn't fully dissipate</li>
+                  </ul>
+                  <div class="p-4 bg-zinc-900/50 rounded-2xl border border-white/5 text-xs md:text-sm text-zinc-400 leading-relaxed">
+                    <p>You default to proven patterns over optimal solutions. Decisions speed up but lose depth.</p>
+                    <p class="mt-2 text-white font-medium">You're still executing — but part of your cognitive bandwidth has been split away from the task and redirected to managing the internal threat.</p>
+                  </div>
+                  <div class="pt-4 border-t border-white/10">
+                    <p class="text-[9px] md:text-[10px] font-black tracking-widest text-zinc-500 uppercase">
+                      <span class="text-white">Reveals:</span> Exactly where your bandwidth is leaking — which demands consume more resources than the task warrants.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-32 mt-0 relative z-20">
+      <div class="p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl text-zinc-300 leading-relaxed">
+        <p class="mb-2">The real pressure isn't external. It's in your brain's interpretation.</p>
+        <p>Two leaders can face the same crisis. One is in a challenge zone — mobilised, sharp, clean. The other is in protection mode — compressed, reactive, split.</p>
+        <p class="text-white font-bold mt-4">The external environment is identical. The internal calculation is the difference.</p>
+      </div>
+    </section>
+
+    <!-- Part 4: Compound -->
+    <section class="mb-32 space-y-12">
+      <div>
+        <SectionTag label="Part 4" />
+        <h2 class="text-4xl font-black mb-6">Why Pushing Through Works — And Where It Stops</h2>
+        <p class="text-zinc-400">Short-term, it got you here. But running a costly pattern for long enough, you stop feeling it as costly. <span class="text-white font-bold italic">You just call it normal.</span></p>
+      </div>
+      <div class="p-10 card-blur border-mint/10">
+        <p class="text-zinc-300 leading-[1.8]">You don't notice it the same way you don't notice the <span class="text-white">hum of an air conditioning unit</span> that's been running for years. It's just the environment now. But normalised doesn't mean free. The meter has been ticking the whole time; you've just stopped watching it.</p>
+        <p class="text-zinc-400 mt-6 italic font-medium">That's actually the most expensive version of this pattern. Not the acute spike that gets your attention. The low-grade, continuous drain that never quite crosses the threshold where you'd stop and audit it.</p>
+      </div>
+
+      <div class="py-6">
+        <div class="text-center mb-10">
+          <h3 class="text-2xl font-black text-white">The Compound Reality</h3>
+          <p class="text-zinc-400 mt-2 text-lg">Two leaders. Same revenue, same growth, same results.</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto mb-16 p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl">
+          <p class="text-white font-bold text-xl mb-6">Same results this quarter. <span class="text-mint">Compound that over five years.</span></p>
+          <div class="space-y-4 text-zinc-300 leading-relaxed text-lg">
+            <p>Who makes sharper decisions when a real crisis hits, when everything goes south?</p>
+            <p>Who is still operating at full capacity at 60, and who burned out at 52?</p>
+            <div class="p-5 bg-zinc-900/60 rounded-2xl border border-white/5 mt-6">
+              <p class="text-white font-medium italic">"The problem isn't the strategy. It's the compounding cost of running it at a senior level, sustained, over the years."</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-zinc-500 text-xs tracking-widest uppercase mt-4 text-center animate-pulse mb-8">Select a pattern below to map the 5-year internal architecture</p>
+
+        <div class="grid md:grid-cols-2 gap-6" id="leader-cards">
+          <button id="btn-leader-a" class="text-left p-8 card-blur border-transparent hover:border-mint/30 hover:shadow-[0_0_25px_rgba(152,255,217,0.15)] transition-all duration-300 group relative overflow-hidden focus:outline-none">
+            <div class="absolute inset-0 bg-mint/0 group-hover:bg-mint/5 transition-colors duration-300"></div>
+            <div class="relative z-10 pointer-events-none">
+              <h4 class="text-mint font-black tracking-widest uppercase mb-4 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                </svg>
+                Leader A
+              </h4>
+              <p class="text-zinc-300 text-sm leading-relaxed">Operates through a challenge zone with high regulation. Clean activation. Fast decisions. Full recovery between events. Minimal internal carryover.</p>
+            </div>
+          </button>
+
+          <button id="btn-leader-b" class="text-left p-8 card-blur border-transparent hover:border-red-500/30 hover:shadow-[0_0_25px_rgba(255,77,77,0.15)] transition-all duration-300 group relative overflow-hidden focus:outline-none">
+            <div class="absolute inset-0 bg-red-500/0 group-hover:bg-red-500/5 transition-colors duration-300"></div>
+            <div class="relative z-10 pointer-events-none">
+              <h4 class="text-red-500 font-black tracking-widest uppercase mb-4 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+                Leader B
+              </h4>
+              <p class="text-zinc-300 text-sm leading-relaxed">Operates through overload, suppresses it, and delivers the same output through discipline and willpower.</p>
+            </div>
+          </button>
+        </div>
+
+        <div id="compound-result-a" class="hidden opacity-0 translate-y-8 transition-all duration-700 ease-out mt-12 p-6 md:p-10 border border-mint/20 rounded-[32px] relative overflow-hidden bg-gradient-to-t from-mint/10 to-transparent shadow-[0_0_40px_rgba(152,255,217,0.1)]">
+          <div class="text-center mb-10">
+            <h4 class="text-mint font-black text-xl md:text-2xl uppercase tracking-widest">Leader A</h4>
+            <p class="text-white mt-1 font-medium text-sm md:text-base">The Compounding Edge (Upward Spiral)</p>
+          </div>
+          <div class="max-w-2xl mx-auto space-y-3 pl-6 border-l-2 border-mint/30">
+            <p class="text-zinc-400 text-sm">Challenge zone activation</p>
+            <p class="text-zinc-300 text-sm">Full resources toward the task</p>
+            <p class="text-zinc-200">Clean decision execution</p>
+            <p class="text-white font-medium">Full bandwidth available</p>
+            <p class="text-white font-semibold">Fast recovery between events</p>
+            <p class="text-white font-bold">Pattern recognition sharpens</p>
+            <p class="text-white font-bold text-lg">Identity stable under pressure</p>
+            <p class="text-mint font-black text-lg">Capacity expands</p>
+            <p class="text-mint font-black text-xl drop-shadow-[0_0_10px_rgba(152,255,217,0.8)]">Higher load — same regulation</p>
+          </div>
+          <div class="mt-10 pt-6 border-t border-mint/10 text-center">
+            <p class="text-mint font-black uppercase tracking-widest text-[10px] md:text-xs">Results — with compounding capacity</p>
+          </div>
+        </div>
+
+        <div id="compound-result-b" class="hidden opacity-0 translate-y-8 transition-all duration-700 ease-out mt-12 p-6 md:p-10 border border-red-500/20 rounded-[32px] relative overflow-hidden bg-gradient-to-b from-red-500/10 to-transparent shadow-[0_0_40px_rgba(255,77,77,0.05)]">
+          <div class="text-center mb-10">
+            <h4 class="text-red-500 font-black text-xl md:text-2xl uppercase tracking-widest">Leader B</h4>
+            <p class="text-white mt-1 font-medium text-sm md:text-base">The Silent Drain (Downward Spiral)</p>
+          </div>
+          <div class="max-w-2xl mx-auto space-y-3 pl-6 border-l-2 border-red-500/30">
+            <p class="text-red-500 font-black text-xl drop-shadow-[0_0_10px_rgba(255,77,77,0.8)]">Overload — Protection mode activates</p>
+            <p class="text-white font-black">Bandwidth splits — task + internal stability</p>
+            <p class="text-white font-bold">Discipline overrides the signal</p>
+            <p class="text-white font-semibold">Higher energy cost, same output</p>
+            <p class="text-zinc-100 font-medium">Incomplete recovery</p>
+            <p class="text-zinc-200">Baseline shifts down</p>
+            <p class="text-zinc-300">Friction normalised — feels like default</p>
+            <p class="text-zinc-400">Threshold lowers — less takes more</p>
+            <p class="text-zinc-500">More load, less capacity — breakdown inevitable</p>
+          </div>
+          <div class="mt-10 pt-6 border-t border-red-500/10 text-center">
+            <p class="text-red-500 font-black uppercase tracking-widest text-[10px] md:text-xs mb-1.5">Results — with compounding cost.</p>
+            <p class="text-red-400/80 text-[8px] md:text-[9px] uppercase tracking-widest font-bold">Loop uninterrupted, this ends one way.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-12">
+        <div class="p-8 card-blur space-y-4">
+          <h4 class="text-sm font-black text-white uppercase">Metabolically Expensive</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">Willpower and cognitive bandwidth are finite resources. Every time you override friction with discipline, you spend from a limited account that doesn't always replenish.</p>
+        </div>
+        <div class="p-8 card-blur space-y-4">
+          <h4 class="text-sm font-black text-white uppercase">Structural Degradation</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">Chronic stress causes measurable <span class="text-red-400 font-bold">loss of connections in the prefrontal cortex</span>. This isn't fatigue. It's the degradation of the region governing strategic thinking.</p>
+        </div>
+        <div class="p-8 card-blur space-y-4">
+          <h4 class="text-sm font-black text-white uppercase">Decision Quality Shift</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">Under protection mode, your brain prefers certainty over upside, defaults to proven patterns over optimal solutions. Subtly, but compoundingly reactive.</p>
+        </div>
+        <div class="p-8 card-blur space-y-4">
+          <h4 class="text-sm font-black text-white uppercase">The Reinforcing Loop</h4>
+          <p class="text-zinc-400 text-sm leading-relaxed">Every time tension triggers action, the wiring strengthens. Eventually, it learns: <span class="text-white italic">no pressure = no ignition</span>. You need escalating stakes just to mobilise.</p>
+        </div>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto mt-12">
+        <p class="text-zinc-400 mb-4">And none of it shows up in any metric, no KPI. No quarterly review catches it.</p>
+        <p class="text-white font-medium italic leading-relaxed">"It accumulates silently until a decision misses badly, a relationship breaks, or health forces the conversation you kept postponing."</p>
+      </div>
+    </section>
+
+    <!-- Part 5: Steps -->
+    <section class="mb-32 space-y-12">
+      <div>
+        <SectionTag label="Part 5" />
+        <h2 class="text-4xl font-black mb-6">What's Actually Happening Inside</h2>
+        <p class="text-zinc-400">The mechanism that runs automatically in every high-stakes situation:</p>
+        <p class="text-zinc-500 text-xs tracking-widest uppercase mt-6 animate-pulse">Select a step below to reveal the internal architecture</p>
+      </div>
+
+      <div class="flex flex-col gap-4" id="steps-container">
+        {[
+          { id: "step1", num: "01", label: "Event Happens →", trailing: "Neutral Data", active: false, body: `<p class="text-white font-bold mb-2">Neutral data. Nothing more.</p><p>An email lands. A meeting starts. A number changes. The event itself carries zero meaning — your system assigns it.</p>` },
+          { id: "step2", num: "02", label: "Brain Labels It →", trailing: "Threat or Opportunity", active: true, body: `<p class="text-mint font-bold mb-2">Threat or opportunity — decided in milliseconds.</p><p class="mb-3">Your brain is a prediction machine. Before conscious thought fires, it runs one calculation:<br /><span class="text-white font-medium">Perceived Threat vs Perceived Resources</span></p><ul class="space-y-2 mb-4 bg-black/20 p-4 rounded-xl"><li><span class="text-mint font-bold">→</span> Resources &gt; Threat: labelled opportunity. System mobilises cleanly.</li><li><span class="text-red-400 font-bold">→</span> Threat &gt; Resources: labelled danger. Protection mode activates.</li></ul><p class="text-white italic">The intensity of the label determines everything downstream.</p>` },
+          { id: "step3", num: "03", label: "Label Triggers →", trailing: "Emotion (Fear or Mobilisation)", active: false, body: `<p class="text-white font-bold mb-2">Not a feeling. A biological event.</p><p class="mb-3">The label fires a chemical response proportional to the intensity of the threat calculation.</p><ul class="space-y-2 mb-4 bg-black/20 p-4 rounded-xl"><li><span class="text-mint font-bold">→ Clean label:</span> adrenaline + dopamine. Sharp, focused, energised.</li><li><span class="text-red-400 font-bold">→ Threat label:</span> cortisol + adrenaline. Narrowed, vigilant, split.</li></ul><p class="italic text-zinc-300">You don't choose the emotion. The label chose it for you — 200 milliseconds ago.</p>` },
+          { id: "step4", num: "04", label: "Emotion Triggers →", trailing: "Thought Patterns (Noise or Problem Solving)", active: false, body: `<p class="text-white font-bold mb-3">Your state of being is now set.</p><ul class="space-y-2 mb-4 bg-black/20 p-4 rounded-xl"><li><span class="text-blue-400 font-bold">→ Underload:</span> flat, under-stimulated, creative bandwidth open</li><li><span class="text-mint font-bold">→ Challenge zone:</span> fully mobilised, sharp, all resources on the task</li><li><span class="text-red-400 font-bold">→ Overload/Protection:</span> bandwidth split — part on the task, part managing the internal threat</li></ul><p class="mb-2">Thought patterns follow the zone automatically. Challenge zone generates thoughts that push forward. Protection mode generates thoughts that protect.</p><p class="text-zinc-300 italic">You experience both as "just thinking" — they're not the same thing.</p>` },
+          { id: "step5", num: "05", label: "Thoughts Trigger →", trailing: "Actions (Reactive or Focused)", active: false, body: `<p class="text-white font-bold mb-4">Two very different engines.</p><div class="space-y-4"><div class="p-3 bg-mint/5 border-l-2 border-mint rounded-r-lg"><span class="text-mint font-bold block mb-1">Challenge zone:</span> thoughts accelerate execution. Clarity → decision → movement. Low internal resistance.</div><div class="p-3 bg-red-500/5 border-l-2 border-red-500 rounded-r-lg"><span class="text-red-400 font-bold block mb-1">Protection mode:</span> thoughts create friction. Most leaders override this with willpower and discipline — and it works. But it costs.</div></div><p class="mt-4 text-white italic">You're running the task and fighting your own system simultaneously. High output, high burn rate.</p>` },
+          { id: "step6", num: "06", label: "Actions Create →", trailing: "Outcomes", active: false, body: `<p class="text-white font-bold mb-2">The loop closes — and strengthens.</p><p class="mb-3">Whatever you just ran, your system files as the validated response to that type of event.</p><ul class="space-y-2 mb-5"><li><span class="text-mint font-bold">→ Ran it clean:</span> pattern strengthens toward challenge zone next time.</li><li><span class="text-orange-400 font-bold">→ Ran it through willpower:</span> pattern strengthens the dependency on discipline to override friction.</li><li><span class="text-red-500 font-bold">→ Ran it in protection mode repeatedly:</span> system normalises protection as the default. Baseline shifts.</li></ul><div class="p-4 bg-white/5 border border-white/10 rounded-xl relative overflow-hidden"><div class="absolute inset-0 bg-gradient-to-r from-mint/5 to-transparent pointer-events-none"></div><p class="text-zinc-300 text-sm mb-3 relative z-10">If no conscious feedback is given — the body decides automatically. It assumes whatever just happened is what you wanted. Pattern reinforces. Runs stronger next time.</p><p class="text-mint font-black text-[10px] uppercase tracking-widest relative z-10">Where attention goes, energy flows.</p></div>` },
+        ].map((s) => (
+          <div class:list={["card-blur transition-colors duration-300 overflow-hidden group", s.active ? "border-mint/40 bg-mint/5" : "border-transparent hover:border-mint/30"]}>
+            <button data-step={s.id} class="step-toggle w-full flex items-center justify-between p-6 focus:outline-none cursor-pointer">
+              <div class="flex items-center gap-6 text-left">
+                <div data-badge={s.id} class:list={["w-8 h-8 rounded-full flex items-center justify-center text-[10px] font-black shrink-0 transition-colors duration-300", s.active ? "bg-mint text-black" : "bg-zinc-800"]}>{s.num}</div>
+                <div class:list={[s.active ? "text-white" : "text-zinc-500", "uppercase tracking-widest text-xs", s.active && "font-black"]}>
+                  {s.label} <span class:list={[s.active ? "text-mint italic underline underline-offset-4" : "text-zinc-400 font-bold"]}>{s.trailing}</span>
+                </div>
+              </div>
+              <svg data-chevron={s.id} class:list={["w-5 h-5 transition-transform duration-300 shrink-0", s.active ? "text-mint" : "text-zinc-500 group-hover:text-mint"]} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div data-content={s.id} class="expandable-content">
+              <div class="expandable-inner">
+                <div class:list={["expandable-inner-content px-6 pb-6 pt-2 ml-14 text-sm text-zinc-400 leading-relaxed border-t mt-2", s.active ? "border-mint/20" : "border-white/5"]} set:html={s.body} />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <p class="text-zinc-300 leading-relaxed mt-8 p-6 bg-zinc-900/40 rounded-3xl border border-white/5">
+        Most interventions try to work at <span class="text-white font-bold">Step 5</span> (Willpower, Discipline). It works, but you're fighting a current your own system already created. <span class="text-white italic font-bold">The calculation at Step 2 is the only thing that changes the cascade.</span>
+      </p>
+    </section>
+
+    <!-- Part 6: Thinking vs Thoughts -->
+    <section class="mb-32 space-y-12">
+      <div>
+        <SectionTag label="Part 6" />
+        <h2 class="text-4xl font-black mb-6">The Threat-Dependency Loop</h2>
+        <p class="text-zinc-400">Conditioning vs. Drive.</p>
+      </div>
+
+      <div class="space-y-6 text-zinc-300 text-lg leading-relaxed">
+        <p>Over years under sustained pressure, most high-performers wire their system like this:</p>
+        <div class="grid md:grid-cols-2 gap-4 max-w-2xl">
+          <div class="p-5 bg-zinc-900/50 rounded-2xl border border-white/5 text-sm flex items-center gap-4">
+            <div class="w-2 h-2 rounded-full bg-zinc-600 shrink-0"></div>
+            <div><span class="text-zinc-500 font-bold">Low tension</span> <span class="text-zinc-400">→ Low activation → Feels unproductive</span></div>
+          </div>
+          <div class="p-5 bg-mint/5 rounded-2xl border border-mint/20 text-sm flex items-center gap-4">
+            <div class="w-2 h-2 rounded-full bg-mint shrink-0 shadow-[0_0_10px_rgba(152,255,217,0.8)]"></div>
+            <div><span class="text-mint font-bold">High tension</span> <span class="text-white font-medium">→ Full engagement → Feels like real work</span></div>
+          </div>
+        </div>
+        <p>When things are calm, it feels like something's missing. When the stakes rise, you come alive. You probably call that drive. It's actually conditioning — and there's a difference.</p>
+        <p class="text-mint font-bold italic">The consequence: internal amplification gets layered on top of real pressure.</p>
+      </div>
+
+      <div class="relative p-8 md:p-10 rounded-[32px] border border-dashed border-zinc-600 bg-zinc-900/20 mt-12">
+        <div class="absolute -top-3 left-8 bg-[#050505] px-4 text-[10px] font-black tracking-widest text-zinc-500 uppercase flex items-center gap-2 border border-zinc-800 rounded-full">
+          <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+          </svg>
+          Observation
+        </div>
+        <p class="text-zinc-300 text-lg leading-relaxed font-medium">
+          The deadlines are real. The stakes are high, that's not the point. But if you watch closely, there's a consistent gap between <span class="text-white italic">what a situation objectively requires</span> and <span class="text-white italic">how much internal processing it generates.</span>
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-16 items-stretch relative">
+        <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 items-center justify-center z-10 text-mint drop-shadow-[0_0_8px_rgba(152,255,217,0.5)]">
+          <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+        </div>
+
+        <div class="p-8 md:p-10 bg-zinc-900/40 rounded-[32px] border border-white/5 flex flex-col justify-center shadow-lg relative z-0">
+          <p class="text-zinc-500 uppercase tracking-widest text-[10px] font-black mb-6">Normal Condition</p>
+          <p class="text-white font-bold italic text-2xl mb-4">"I can't switch off."</p>
+          <p class="text-zinc-400 text-sm leading-relaxed">You don't mean you can't stop thinking. You mean you can't stop the <span class="text-white font-bold">automated thought generation</span> the system has built under pressure.</p>
+        </div>
+
+        <div class="w-full min-h-[320px] relative z-0">
+          <div id="distinction-container" class="w-full h-full relative p-8 md:p-10 card-blur border-mint/20 flex flex-col shadow-[0_0_30px_rgba(152,255,217,0.05)] distinction-transition">
+            <div class="flex justify-between items-center mb-6 shrink-0">
+              <p id="distinction-label" class="text-mint uppercase tracking-widest text-[10px] font-black distinction-transition">The Core Distinction</p>
+              <div id="distinction-counter" class="bg-black/50 px-3 py-1 rounded-full border border-white/10 text-zinc-400 text-[10px] font-black tracking-widest distinction-transition">1 / 2</div>
+            </div>
+
+            <div class="relative flex-1 min-h-[120px]">
+              <div id="content-thinking" class="absolute inset-0 distinction-transition opacity-100 z-10">
+                <h4 class="text-white font-black text-2xl mb-4">Thinking</h4>
+                <p class="text-zinc-300 text-sm leading-relaxed"><span class="text-mint font-bold">→ Thinking is conscious and directed.</span> You apply it to a problem and stop. It has an off switch.</p>
+              </div>
+
+              <div id="content-thoughts" class="absolute inset-0 distinction-transition opacity-0 pointer-events-none z-0">
+                <h4 class="text-white font-black text-2xl mb-4">Thoughts</h4>
+                <p class="text-zinc-300 text-sm leading-relaxed"><span class="text-red-500 font-bold">→ Thoughts are automated</span> — the byproduct of patterns your system has built over the years. The background self-assessment runs on every task.</p>
+              </div>
+            </div>
+
+            <div class="mt-8 flex justify-between items-center border-t border-white/5 pt-6 z-20 shrink-0">
+              <span id="toggle-label" class="text-[10px] font-black text-zinc-500 uppercase tracking-widest distinction-transition">Flip to Thoughts</span>
+              <button id="distinction-toggle" class="w-14 h-7 rounded-full bg-zinc-800 relative p-1 focus:outline-none distinction-transition cursor-pointer ring-1 ring-white/10">
+                <div id="toggle-thumb" class="w-5 h-5 rounded-full bg-mint shadow-[0_0_8px_rgba(152,255,217,0.8)] absolute left-1 top-1 transition-all duration-500 translate-x-0"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 max-w-3xl mx-auto text-center space-y-4">
+        <p class="text-xl md:text-2xl font-bold text-white leading-relaxed">The problem isn't that you think too much.</p>
+        <p class="text-zinc-400 leading-relaxed md:text-lg">The problem is that your system is generating noise you didn't commission, consuming bandwidth, splitting attention, adding internal load to every task, and most of it produces nothing useful.</p>
+      </div>
+
+      <div class="text-center p-12 card-blur border-mint/10 mt-12">
+        <p class="text-xl font-bold text-white mb-6">Ask yourself honestly:</p>
+        <div class="space-y-4 text-zinc-400 italic">
+          <p>"Has mental fatigue ever made you sharper?"</p>
+          <p>"Has the loop at 2 am ever produced a better outcome than a clear head?"</p>
+          <p>"Has burnout ever moved the needle, or did it just make the movement feel more earned?"</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Part 7: Energy Cost -->
+    <section class="mb-32 space-y-12">
+      <div>
+        <SectionTag label="Part 7" />
+        <h2 class="text-4xl font-black mb-6">The Energy Cost</h2>
+        <p class="text-zinc-400 italic">"Two identical lorries. Same load. Same destination. Same route."</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="p-10 card-blur border-mint/20">
+          <div class="text-mint text-xs font-black uppercase mb-4 tracking-widest">Lorry A (Challenge)</div>
+          <p class="text-zinc-400 text-sm leading-relaxed">Runs on a well-maintained engine at the right gear. Fuel burns efficiently. Everything goes toward moving the load forward.</p>
+        </div>
+        <div class="p-10 card-blur border-red-500/20">
+          <div class="text-red-500 text-xs font-black uppercase mb-4 tracking-widest">Lorry B (Protection)</div>
+          <p class="text-zinc-400 text-sm leading-relaxed">A gear too low. Engine working harder. Temp higher. Fuel burning faster. Needs significantly longer in the depot before it can run again.</p>
+        </div>
+      </div>
+
+      <div class="space-y-10 pt-8">
+        <div class="text-center">
+          <h3 class="text-3xl font-black text-white">The Real Cost of Protection Mode</h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <div class="p-8 md:p-10 card-blur border-orange-500/20 relative overflow-hidden group h-full">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500/50 to-transparent"></div>
+            <h4 class="text-2xl font-black text-white mb-1">Short-Term Cost</h4>
+            <p class="text-orange-400 text-xs font-bold uppercase tracking-widest mb-8">In the moment</p>
+            <ul class="space-y-6">
+              {[
+                ["Perception Narrows", "Attention locks on the threat. Lateral options and opportunities drop out of view."],
+                ["Chemical Imbalance", "Cortisol fires. Your system burns resource just stabilising itself before it touches the actual task."],
+                ["Internal Latency", "Micro-hesitation, self-monitoring, background commentary. All running parallel to the work."],
+                ["Decision Quality Degrades", "Brain defaults to safe and familiar over optimal. Every time, in this state."],
+                ["Risk Tolerance Tightens", "More hedging. Fewer bold calls. None of it feels like fear. All of it is."],
+                ["Mental Drain", "You finish depleted not just from the work — but from managing yourself through it."],
+              ].map(([title, body]) => (
+                <li class="flex gap-4">
+                  <span class="text-orange-500 font-bold shrink-0 mt-0.5">→</span>
+                  <div><span class="text-white font-bold block mb-1">{title}</span><span class="text-zinc-400 text-sm leading-relaxed">{body}</span></div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="p-8 md:p-10 card-blur border-red-600/20 relative overflow-hidden group h-full">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600/50 to-transparent"></div>
+            <h4 class="text-2xl font-black text-white mb-1">Long-Term Cost</h4>
+            <p class="text-red-500 text-xs font-bold uppercase tracking-widest mb-8">What compounds if nothing changes</p>
+            <ul class="space-y-6">
+              {[
+                ["Stress Contagion", "Your state is not private. Your team absorbs it before you speak."],
+                ["Calmness Feels Threatening", "Years of tension-based activation wire the system to need pressure just to feel productive."],
+                ["Stress Response Sensitises", "The threshold lowers every year. What needed a crisis at 35 fires on an email at 45."],
+                ["Structural Hardware Degradation", "Chronic stress measurably shrinks prefrontal cortex connections. The part that makes you effective. Structurally."],
+                ["Cardiovascular Risk", "Sustained cortisol scars arteries. Executives face 2–3× higher risk of heart attack and stroke."],
+                ["Depression Risk Compounds", "Leaders are 2× more likely to develop depression. High-achievers, 4×. The same pattern that built the career breaks the person running it."],
+              ].map(([title, body]) => (
+                <li class="flex gap-4">
+                  <span class="text-red-500 font-bold shrink-0 mt-0.5">→</span>
+                  <div><span class="text-white font-bold block mb-1">{title}</span><span class="text-zinc-400 text-sm leading-relaxed">{body}</span></div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Part 8: Solution -->
+    <section class="mb-32 space-y-12">
+      <div>
+        <SectionTag label="Part 8" />
+        <h2 class="text-4xl font-black mb-6">What the Solution Actually Is</h2>
+      </div>
+
+      <div class="space-y-6 text-zinc-300 text-lg leading-relaxed max-w-3xl">
+        <p>Every time you've looked for a solution, someone handed you a productivity hack, a breathing exercise, or told you to slow down.</p>
+        <p>Quick relief. Genuinely. For small friction, it works.</p>
+        <p>But when you're in the trenches — real pressure, real stakes, the loop that won't stop at 2 am — none of it touches it. You've probably already proven that to yourself.</p>
+        <p>That's not a failure of discipline. Those tools are built for a different problem. <span class="text-white font-bold">Handing box-breathing to someone whose nervous system is running a survival calculation is like giving a painkiller to someone mid-surgery.</span> It numbs the surface. The operation is still happening underneath.</p>
+
+        <div class="p-6 md:p-8 border-l-2 border-mint bg-gradient-to-r from-mint/5 to-transparent rounded-r-3xl italic text-zinc-300 my-8 shadow-[0_5px_20px_rgba(0,0,0,0.2)]">
+          "I know this because I took everything I used to give clients and applied it to myself at the worst point of my life. It lasted five minutes. Then the weight came back heavier. The tools weren't wrong. They were just aimed at the symptom, not the architecture generating it."
+        </div>
+
+        <p class="text-white font-black text-xl md:text-2xl pt-4">You don't need another protocol. You need to understand the mechanism that's been running you under pressure.</p>
+      </div>
+
+      <div class="p-8 md:p-12 bg-mint/5 border border-mint/20 rounded-[40px] mt-12 shadow-[0_0_30px_rgba(152,255,217,0.05)]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            ["01", "Map the Trigger", "What specifically fires the protection response in you."],
+            ["02", "Map the Pattern", "What the system does when that trigger fires."],
+            ["03", "Map the Cost", "What it consumes, what it blocks, what it delays."],
+            ["04", "Replace the Pattern", "Install one that doesn't split your bandwidth."],
+          ].map(([num, title, body], i) => (
+            <div class="space-y-4">
+              <div class:list={["w-12 h-12 rounded-full bg-mint text-black flex items-center justify-center font-black", i === 3 && "shadow-[0_0_15px_rgba(152,255,217,0.5)]"]}>{num}</div>
+              <h4 class="text-white font-bold uppercase tracking-widest text-xs">{title}</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed">{body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="space-y-8 pt-8 max-w-4xl">
+        <div class="text-xl md:text-2xl text-white font-medium leading-relaxed">
+          Every leader, athlete, high-performer is limited by the same thing: <span class="text-mint font-bold">their own system.</span>
+        </div>
+        <p class="text-zinc-400 text-lg">Same architecture. Same mechanism. Different intensity, different triggers, different stakes. That's it.</p>
+        <div class="h-px w-full bg-gradient-to-r from-mint/50 to-transparent my-10 opacity-20"></div>
+        <p class="text-xl text-white font-bold">You already have everything the solution requires.</p>
+
+        <div class="relative text-lg leading-relaxed text-zinc-300 mt-6 bg-zinc-900/30 p-8 pb-14 rounded-3xl border border-white/5">
+          <span class="inline-block px-4 py-2 bg-mint/10 border border-mint/50 text-mint font-bold rounded-lg shadow-[0_0_20px_rgba(152,255,217,0.4)] mr-2 mb-2 animate-pulse">Observation and pattern recognition</span>
+          <span class="text-zinc-300">— you use both every single day. On markets, on people, on organisations. You spot inefficiencies in systems others can't see. You read rooms. You connect dots before anyone else has drawn the first line.</span>
+          <div class="absolute bottom-4 right-6 text-[11px] text-zinc-500 italic">Hölzel et al. (2011) — Metacognitive regulation &amp; neural change</div>
+        </div>
+
+        <div class="mt-12 pl-6 border-l-2 border-zinc-700 space-y-4">
+          <p class="text-zinc-300 leading-relaxed text-xl">
+            The only thing that might be missing is the understanding of your own system — <span class="text-white font-medium">how it's wired, what fires it, what it costs</span> — and how to turn the skills you already have onto the architecture running everything else.
+          </p>
+          <p class="text-zinc-500 text-lg font-medium">That's the gap.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="text-center py-32 border-t border-white/5">
+      <h2 class="text-4xl md:text-6xl font-black leading-tight mb-12">
+        One Question Before<br /><span class="text-mint">You Close This</span>
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-10 text-lg">
+        <p class="text-zinc-300 leading-relaxed">
+          You've just read the mechanism. You know the equation. You know the zones. You know what protection mode looks like and what it costs.
+        </p>
+        <div class="p-8 md:p-10 bg-zinc-900/40 rounded-[32px] border border-white/5 space-y-8 relative overflow-hidden text-left">
+          <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-mint/30 to-transparent"></div>
+          <div>
+            <p class="text-white font-bold text-xl mb-2">But here's what this document can't tell you:</p>
+            <p class="text-zinc-400">Where exactly your system is leaking and how exactly it's affecting your decisions and thinking process.</p>
+          </div>
+          <div class="p-6 border-l-2 border-zinc-700 bg-black/20 rounded-r-2xl">
+            <p class="text-zinc-300 italic leading-relaxed">
+              "You can map it alone. I did. It took five months at rock bottom to see what I can show someone else in one conversation. <span class="text-white font-medium">That's the only difference. Not capability. Time and cost.</span>"
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/5">
+            <p class="text-white font-bold mb-6 text-lg">In one conversation, we will:</p>
+            <ul class="space-y-5">
+              {["Map your specific triggers.", "Identify which zone you're spending most of your time in.", "Pinpoint exactly where the bandwidth is leaking."].map((line) => (
+                <li class="flex items-start gap-4">
+                  <div class="mt-1 w-6 h-6 rounded-full bg-mint/10 flex items-center justify-center shrink-0 border border-mint/30">
+                    <svg class="w-3 h-3 text-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <span class="text-zinc-300">{line}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 space-y-6">
+          <p class="text-mint font-black tracking-[0.2em] uppercase text-lg md:text-xl drop-shadow-[0_0_15px_rgba(152,255,217,0.4)]">
+            Your Data. Your System. Your Map.
+          </p>
+          <p class="text-zinc-400 text-sm md:text-base">If you're operating at this level and you've never mapped this, you're running on incomplete data.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-6 pt-12">
+        <CalButton label="Get Your Custom Map" size="lg" />
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script is:inline>
+  // Zone Carousel
+  let currentZoneIndex = 0;
+  const totalZones = 3;
+
+  function updateZones(index, scrollToTarget = true) {
+    currentZoneIndex = index;
+    const cards = document.querySelectorAll(".zone-card");
+    const dots = document.querySelectorAll(".regulator-dot");
+    if (!cards.length) return;
+    cards.forEach((card, i) => {
+      let state = "prev";
+      if (i === currentZoneIndex) state = "active";
+      else if (i === (currentZoneIndex + 1) % totalZones) state = "next";
+      card.setAttribute("data-state", state);
+    });
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === currentZoneIndex));
+
+    const scrollContainer = document.getElementById("zone-scroll-container");
+    if (scrollToTarget && scrollContainer) {
+      const maxScroll = scrollContainer.offsetHeight - window.innerHeight;
+      const targetScroll = scrollContainer.offsetTop + (index * (maxScroll / 2));
+      window.scrollTo({ top: targetScroll, behavior: "smooth" });
+    }
+  }
+
+  document.querySelectorAll(".regulator-dot").forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const idx = parseInt(dot.getAttribute("data-zone") || "0", 10);
+      updateZones(idx);
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    const scrollContainer = document.getElementById("zone-scroll-container");
+    if (!scrollContainer) return;
+    const rect = scrollContainer.getBoundingClientRect();
+    const scrollDistance = scrollContainer.offsetHeight - window.innerHeight;
+    const currentScroll = -rect.top;
+    if (currentScroll >= 0 && currentScroll <= scrollDistance) {
+      let progress = currentScroll / scrollDistance;
+      let newIndex = 0;
+      if (progress > 0.66) newIndex = 2;
+      else if (progress > 0.33) newIndex = 1;
+      if (currentZoneIndex !== newIndex) updateZones(newIndex, false);
+    } else if (currentScroll < 0 && currentZoneIndex !== 0) {
+      updateZones(0, false);
+    } else if (currentScroll > scrollDistance && currentZoneIndex !== 2) {
+      updateZones(2, false);
+    }
+  });
+
+  document.addEventListener("DOMContentLoaded", () => updateZones(0, false));
+
+  // Expandable Steps
+  document.querySelectorAll(".step-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const stepId = btn.getAttribute("data-step");
+      const content = document.querySelector(`[data-content="${stepId}"]`);
+      const chevron = document.querySelector(`[data-chevron="${stepId}"]`);
+      const badge = document.querySelector(`[data-badge="${stepId}"]`);
+      if (!content || !chevron) return;
+      const expanded = content.classList.toggle("expanded");
+      chevron.classList.toggle("rotate-180", expanded);
+      if (badge && stepId !== "step2") {
+        if (expanded) {
+          badge.classList.replace("bg-zinc-800", "bg-mint");
+          badge.classList.add("text-black");
+        } else {
+          badge.classList.replace("bg-mint", "bg-zinc-800");
+          badge.classList.remove("text-black");
+        }
+      }
+    });
+  });
+
+  // Distinction crossfade
+  let isThoughts = false;
+  const toggleBtn = document.getElementById("distinction-toggle");
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      isThoughts = !isThoughts;
+      const container = document.getElementById("distinction-container");
+      const label = document.getElementById("distinction-label");
+      const counter = document.getElementById("distinction-counter");
+      const contentThinking = document.getElementById("content-thinking");
+      const contentThoughts = document.getElementById("content-thoughts");
+      const toggleLabel = document.getElementById("toggle-label");
+      const toggleThumb = document.getElementById("toggle-thumb");
+      const toggleBg = document.getElementById("distinction-toggle");
+
+      if (isThoughts) {
+        container.classList.replace("border-mint/20", "border-red-500/20");
+        label.classList.replace("text-mint", "text-red-500");
+        counter.innerText = "2 / 2";
+        contentThinking.classList.replace("opacity-100", "opacity-0");
+        contentThinking.classList.add("pointer-events-none");
+        contentThoughts.classList.replace("opacity-0", "opacity-100");
+        contentThoughts.classList.remove("pointer-events-none");
+        toggleLabel.innerText = "Flip to Thinking";
+        toggleBg.classList.replace("bg-zinc-800", "bg-red-500/20");
+        toggleThumb.classList.replace("translate-x-0", "translate-x-7");
+        toggleThumb.classList.replace("bg-mint", "bg-red-500");
+      } else {
+        container.classList.replace("border-red-500/20", "border-mint/20");
+        label.classList.replace("text-red-500", "text-mint");
+        counter.innerText = "1 / 2";
+        contentThoughts.classList.replace("opacity-100", "opacity-0");
+        contentThoughts.classList.add("pointer-events-none");
+        contentThinking.classList.replace("opacity-0", "opacity-100");
+        contentThinking.classList.remove("pointer-events-none");
+        toggleLabel.innerText = "Flip to Thoughts";
+        toggleBg.classList.replace("bg-red-500/20", "bg-zinc-800");
+        toggleThumb.classList.replace("translate-x-7", "translate-x-0");
+        toggleThumb.classList.replace("bg-red-500", "bg-mint");
+      }
+    });
+  }
+
+  // Compound cost reveal
+  function revealCompoundCost(leader) {
+    const resultA = document.getElementById("compound-result-a");
+    const resultB = document.getElementById("compound-result-b");
+    const btnA = document.getElementById("btn-leader-a");
+    const btnB = document.getElementById("btn-leader-b");
+    if (!resultA || !resultB || !btnA || !btnB) return;
+    btnA.classList.remove("border-mint", "bg-mint/10");
+    btnB.classList.remove("border-red-500", "bg-red-500/10");
+    if (leader === "A") {
+      btnA.classList.add("border-mint", "bg-mint/10");
+      resultA.classList.remove("hidden");
+      resultB.classList.add("hidden");
+      setTimeout(() => {
+        resultA.classList.remove("opacity-0", "translate-y-8");
+        resultA.classList.add("opacity-100", "translate-y-0");
+        resultA.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 50);
+    } else {
+      btnB.classList.add("border-red-500", "bg-red-500/10");
+      resultB.classList.remove("hidden");
+      resultA.classList.add("hidden");
+      setTimeout(() => {
+        resultB.classList.remove("opacity-0", "translate-y-8");
+        resultB.classList.add("opacity-100", "translate-y-0");
+        resultB.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 50);
+    }
+  }
+  document.getElementById("btn-leader-a")?.addEventListener("click", () => revealCompoundCost("A"));
+  document.getElementById("btn-leader-b")?.addEventListener("click", () => revealCompoundCost("B"));
+</script>

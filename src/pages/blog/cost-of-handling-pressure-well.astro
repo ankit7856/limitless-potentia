@@ -1,0 +1,822 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CalButton from "../../components/CalButton.astro";
+import { getPost, formatDate } from "../../content/posts";
+
+const post = getPost("cost-of-handling-pressure-well")!;
+---
+<BaseLayout
+  title={`${post.title} | Limitless Potentia`}
+  description={post.description}
+  navCtaTarget="#contact"
+  navCtaLabel="Book Your Audit"
+>
+  <section class="hero">
+    <div class="hero-icon">
+      <img src="/logo-small.svg" alt="Limitless Potentia" />
+    </div>
+    <div class="meta">{post.tag} · {formatDate(post.pubDate)} · {post.readMinutes} min read</div>
+    <h1>The Cost of Handling<br /><em>Pressure Well</em></h1>
+    <p class="subtitle">{post.description.split(".")[0]}.</p>
+    <div class="scroll-arrow" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="5" x2="12" y2="19"></line>
+        <polyline points="19 12 12 19 5 12"></polyline>
+      </svg>
+    </div>
+  </section>
+
+  <main class="content">
+    <section class="content-section">
+      <div class="body-copy">
+        <p><strong class="em-white">You handle pressure well. You always have.</strong></p>
+        <p>Most people fold under the conditions you operate in daily. You don't. That's why you're where you are.</p>
+        <p>The question isn't whether you can handle it.</p>
+      </div>
+      <div class="card-red">
+        <p>The question is what handling it this way is <span class="red-em">actually costing you.</span></p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-tag">The variance nobody talks about</span>
+      <div class="body-copy">
+        <p>Watch yourself across a working week. Same role. Same workload. Same team. Same skills.</p>
+        <p>Some days everything moves. Decisions are clean. Conversations are sharp. The work feels frictionless.</p>
+        <p>Other days the same person can't reach what came easily yesterday. Every task gets harder. Decisions take three times longer. Conversations cost more energy than they should. The deal you closed doesn't land, not frustrated, not relieved, just blank.</p>
+        <p>You've probably stopped trying to explain it. Founders absorb it as the cost of the role. The week is just A-days and B-days now.</p>
+      </div>
+
+      <div class="card-mint-stat">
+        <p>When I tracked it, <span class="mint">20+ hours a week</span> disappearing into forced effort. Half a working week, gone, every week. Not into anything that compounds.</p>
+      </div>
+
+      <div class="body-copy">
+        <p>You've got more output, more revenue, more team than you had two years ago. You also have more days where you can't access the version of yourself who built this.</p>
+        <p>The structure you built to hold yourself together stopped being the tool. It became the floor.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-tag">The mopping problem</span>
+
+      <div class="card-diagram">
+        <div class="diagram-cols">
+          <div class="diagram-col">
+            <div class="diagram-dot diagram-dot-red"></div>
+            <div class="diagram-line diagram-line-red"></div>
+            <div class="diagram-label diagram-label-red">Pipe Leaking</div>
+          </div>
+          <div class="diagram-col diagram-col-divider">
+            <div class="diagram-dot diagram-dot-mint"></div>
+            <div class="diagram-line diagram-line-mint"></div>
+            <div class="diagram-label diagram-label-mint">Mopping the Floor</div>
+          </div>
+        </div>
+        <div class="diagram-caption">Same problem. Wrong layer.</div>
+      </div>
+
+      <div class="body-copy">
+        <p>B-days aren't the problem. They're what shows up on the surface when something underneath isn't working.</p>
+        <p>Think of it like a leaking pipe inside a wall. Water keeps appearing on the floor.</p>
+        <p>You mop. You buy a better mop. You wake up earlier to mop. You discipline yourself to be more consistent. Some days the floor stays dry. Other days the water keeps coming.</p>
+        <p>You think you have a mopping problem.</p>
+      </div>
+
+      <div class="callout-white">You have a pipe problem.</div>
+
+      <div class="body-copy">
+        <p>Everything you've tried — better systems, sharper habits, tighter routines, mindset work — that's mopping. It operates on the floor. The symptom. It works for a stretch, until the pipe leaks again.</p>
+      </div>
+    </section>
+
+    <!-- Flowchart -->
+    <section class="content-section">
+      <div class="body-copy" style="margin-bottom:2rem;">
+        <p>Here's what the pipe actually is — the calculation your brain runs on every situation before you consciously think anything:</p>
+      </div>
+
+      <div class="flowchart-wrap">
+        <div class="fc-inner">
+          <div class="fc-title">How Your Brain Decides: Threat vs Challenge</div>
+
+          <div class="chart-box">SITUATION OCCURS<div class="sub">Quarterly miss, team conflict, market shift</div></div>
+          <div class="connector"></div><div class="arrow-head"></div>
+
+          <div class="chart-box">APPRAISAL SYSTEM ACTIVATES</div>
+          <div class="connector"></div><div class="arrow-head"></div>
+
+          <div class="fc-primary-wrap">
+            <div class="chart-box fc-primary">
+              PRIMARY APPRAISAL
+              <div class="sub">"Does this matter to me?"</div>
+              <div class="fc-no-exit">
+                <div class="fc-no-line"></div>
+                <div class="fc-no-label">NO</div>
+                <div class="chart-box fc-no-box">NO STRESS<br /><span class="fc-no-sub">(Irrelevant)</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="connector"></div>
+          <div class="fc-yes-label">YES</div>
+          <div class="arrow-head"></div>
+
+          <div class="chart-box glow-mint fc-secondary">
+            SECONDARY APPRAISAL
+            <div class="sub">"Do I have resources to handle it?"</div>
+          </div>
+
+          <div class="fc-fork-connector"></div>
+
+          <div class="fc-fork">
+            <div class="fc-branch">
+              <div class="fc-hline fc-hline-right"></div>
+              <div class="fc-vline"><div class="fc-vline-label fc-vline-label-red">No</div></div>
+              <div class="arrow-head fc-arrow-spaced"></div>
+              <div class="chart-box glow-red fc-branch-title fc-branch-title-red">Threat Response</div>
+              <div class="connector red"></div>
+              <div class="biology-card red fc-bio">
+                <div class="bio-title bio-title-red">Biology B</div>
+                <ul>
+                  <li>Amygdala hijacks</li>
+                  <li>Cortisol = poison</li>
+                  <li>Energy <span class="bio-arrow-red">↓</span></li>
+                  <li>Panic, scattered focus</li>
+                  <li>Performance collapses</li>
+                </ul>
+              </div>
+              <div class="connector red"></div>
+              <div class="chart-box fc-branch-sub fc-branch-sub-red">Survival Mindset</div>
+              <div class="connector red"></div>
+              <div class="fc-outcome-box fc-outcome-red">Reinforces:<br />"I can't handle this"</div>
+            </div>
+
+            <div class="fc-branch">
+              <div class="fc-hline fc-hline-left"></div>
+              <div class="fc-vline"><div class="fc-vline-label fc-vline-label-mint">Yes</div></div>
+              <div class="arrow-head fc-arrow-spaced"></div>
+              <div class="chart-box glow-mint fc-branch-title fc-branch-title-mint">Challenge Response</div>
+              <div class="connector mint"></div>
+              <div class="biology-card mint fc-bio">
+                <div class="bio-title bio-title-mint">Biology A</div>
+                <ul>
+                  <li>Prefrontal cortex in control</li>
+                  <li>Cortisol = fuel</li>
+                  <li>Energy <span class="bio-arrow-mint">↑</span></li>
+                  <li>Focus sharp</li>
+                  <li>Performance improves</li>
+                </ul>
+              </div>
+              <div class="connector mint"></div>
+              <div class="chart-box glow-mint fc-branch-sub fc-branch-sub-mint">Growth Mindset</div>
+              <div class="connector mint"></div>
+              <div class="fc-outcome-box fc-outcome-mint">Reinforces:<br />"I can handle this"</div>
+            </div>
+          </div>
+
+          <div class="fc-prophecy">
+            <div class="pulse-dot"></div>
+            Self-Fulfilling Prophecy Loop
+            <div class="pulse-dot"></div>
+          </div>
+        </div>
+        <div class="fc-citation">Lazarus &amp; Folkman (1984) — Cognitive appraisal model</div>
+      </div>
+
+      <div class="body-copy" style="margin-top:2rem;">
+        <p>When that secondary appraisal comes back as threat, the whole system shifts. That's what a B-day is. Not a discipline failure. A miscalibrated calculation running a different biology.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-tag">Why I know this</span>
+      <div class="story-grid">
+        <div class="story-card body-copy">
+          <p>I went through this loop twice.</p>
+          <p>The first time I had no idea what was happening. I just kept mopping harder.</p>
+          <p>The second time, I went through it with all the knowledge. I'd read everything. Understood the neuroscience. Could name the pattern in real time as it ran. And still couldn't stop it.</p>
+          <p>Sitting there with every framework I'd accumulated and not being able to use any of it — that's when I understood. The loop doesn't care what you know. It only responds to what you've actually worked through at the layer it lives at.</p>
+        </div>
+        <div class="story-photo">
+          <img src="/me.jpg" alt="Ankit, Founder of Limitless Potentia" />
+        </div>
+      </div>
+      <div class="quote-mint">"You can't think your way out of a system built out of thinking."</div>
+    </section>
+
+    <section class="content-section">
+      <span class="section-tag">What the work actually is</span>
+      <div class="body-copy">
+        <p>Underneath everything you do, your system is running a fast calculation: <span class="em-white">do I have what I need to handle this?</span> On A-days, the answer comes back yes — you mobilise cleanly, full focus, full presence. On B-days, the calculation comes back differently. Part of you is on the task. Part of you is managing internal friction.</p>
+        <p>You're not running on weaker willpower on B-days. You're running through more friction with the same engine.</p>
+      </div>
+
+      <div class="body-copy" style="margin-top:2rem;">
+        <p>Your system operates across three zones based on this calculation. Each one is telling you something specific:</p>
+      </div>
+
+      <div class="zones-list">
+        <div class="zone-block zone-block-blue">
+          <div class="zone-header">
+            <div class="zone-name zone-name-blue">Underload</div>
+            <div class="zone-badge zone-badge-blue">PR &gt;&gt; PT</div>
+          </div>
+          <p class="zone-lead">Resources far exceed demand. System feels flat, under-stimulated. This is where your brain is <strong class="zone-strong-blue">most creative</strong>.</p>
+          <ul class="zone-bullets">
+            <li>Broad perception</li>
+            <li>Open pattern recognition</li>
+            <li>Novel connections</li>
+            <li>Long-range strategic thinking</li>
+          </ul>
+          <div class="zone-detail">
+            <p>It's why the best ideas come in the shower, on a walk, at 6am before the noise starts.</p>
+          </div>
+          <div class="zone-reveals">
+            <span class="zone-reveals-key">Reveals:</span> Your current creative and strategic ceiling, what your system can generate when it's not in resource-protection mode.
+          </div>
+        </div>
+
+        <div class="zone-block zone-block-mint">
+          <div class="zone-header">
+            <div class="zone-name zone-name-mint">Challenge Zone</div>
+            <div class="zone-badge zone-badge-mint">PR ≈ PT</div>
+          </div>
+          <p class="zone-lead">High demand, stable perception. The nervous system mobilises fully. This is where your brain is <strong class="zone-strong-mint">most competitive</strong>.</p>
+          <ul class="zone-bullets">
+            <li>Focus sharpens</li>
+            <li>Energy moves</li>
+            <li>Decisions are clean</li>
+            <li>No bandwidth split</li>
+          </ul>
+          <div class="zone-detail">
+            <p class="zone-detail-strong">Executing strategy. Using pattern libraries. Pushing hard. Getting fast feedback.</p>
+            <p>Elite operators engineer this state — not through willpower, through calibration.</p>
+          </div>
+          <div class="zone-reveals">
+            <span class="zone-reveals-key">Reveals:</span> Your current performance tolerance, the ceiling you can operate at cleanly right now.
+          </div>
+        </div>
+
+        <div class="zone-block zone-block-red">
+          <div class="zone-header">
+            <div class="zone-name zone-name-red">Overload / Protection</div>
+            <div class="zone-badge zone-badge-red">PT &gt; PR</div>
+          </div>
+          <p class="zone-lead">This is where <strong class="zone-strong-red">all internal friction</strong> lives. The system shifts priority from the task to personal protection.</p>
+          <ul class="zone-bullets">
+            <li>Brain-fog &amp; heaviness</li>
+            <li>Second-guessing</li>
+            <li>Perception narrows</li>
+            <li>Stress doesn't fully dissipate</li>
+          </ul>
+          <div class="zone-detail">
+            <p>You default to proven patterns over optimal solutions. Decisions speed up but lose depth.</p>
+            <p class="zone-detail-strong">You're still executing, but part of your bandwidth has been split away from the task and redirected to managing the internal threat.</p>
+          </div>
+          <div class="zone-reveals">
+            <span class="zone-reveals-key">Reveals:</span> Exactly where your bandwidth is leaking, which demands consume more resources than the task warrants.
+          </div>
+        </div>
+      </div>
+
+      <div class="body-copy" style="margin-top:1.5rem;">
+        <p>When I mapped my own pattern, the protection zone was where most of my week was going. I'd normalised it. The audit maps exactly where you are, and what's pulling you there.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="cta-section">
+      <h2>If you've observed this loop</h2>
+      <div class="cta-body">
+        <p>I'm running 45-minute audits with a few founders this month. Not a discovery call.</p>
+        <p>We map what's actually running underneath your B-days — your specific triggers, where the energy is leaking, what your system is actually responding to. You'll leave with an articulation of what's been happening that you couldn't name before.</p>
+      </div>
+      <CalButton label="Book Your Audit" size="lg" />
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 1.5rem 4rem;
+  }
+  .hero-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(9, 9, 11, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 30px rgba(152, 255, 217, 0.12);
+    margin-bottom: 2.5rem;
+  }
+  .hero-icon img { width: 2.5rem; height: 2.5rem; }
+  .hero .meta {
+    color: #71717a;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    max-width: 54rem;
+  }
+  .hero h1 em { color: #98FFD9; font-style: italic; }
+  .hero .subtitle {
+    color: #a1a1aa;
+    font-size: 1.15rem;
+    max-width: 36rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+  }
+  .scroll-arrow { color: #98FFD9; animation: bounce-soft 2.5s ease-in-out infinite; }
+  @keyframes bounce-soft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  /* Content layout */
+  .content { max-width: 48rem; margin: 0 auto; padding: 0 1.5rem 8rem; }
+  .content-section { margin-bottom: 6rem; }
+  .body-copy { color: #d4d4d8; font-size: 1.1rem; line-height: 1.85; }
+  .body-copy p + p { margin-top: 1.5rem; }
+  .em-white { color: #fff; font-weight: 600; }
+
+  /* Red callout */
+  .card-red {
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 77, 77, 0.3);
+    background: rgba(255, 77, 77, 0.05);
+    box-shadow: 0 0 32px rgba(255, 77, 77, 0.12);
+    padding: 2.25rem;
+    margin-top: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-red::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ff4d4d, transparent);
+    opacity: 0.5;
+  }
+  .card-red p {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .card-red .red-em { color: #ff6b6b; }
+
+  /* Mint stat card */
+  .card-mint-stat {
+    border: 1px solid rgba(152, 255, 217, 0.22);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    padding: 2.5rem 3rem;
+    text-align: center;
+    margin: 2.5rem 0;
+    box-shadow: 0 0 40px rgba(152, 255, 217, 0.07);
+  }
+  .card-mint-stat p { font-size: 1.2rem; font-weight: 700; color: #fff; line-height: 1.65; }
+  .card-mint-stat .mint { color: #98FFD9; }
+
+  /* Diagram card */
+  .card-diagram {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1.5rem;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+  }
+  .diagram-cols { display: grid; grid-template-columns: 1fr 1fr; }
+  .diagram-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.75rem 1rem;
+  }
+  .diagram-col-divider { border-left: 1px solid rgba(255, 255, 255, 0.05); }
+  .diagram-dot { width: 0.75rem; height: 0.75rem; border-radius: 50%; flex-shrink: 0; }
+  .diagram-dot-red { background: #ff4d4d; box-shadow: 0 0 10px rgba(255, 77, 77, 0.5); }
+  .diagram-dot-mint { background: #98FFD9; box-shadow: 0 0 10px rgba(152, 255, 217, 0.5); }
+  .diagram-line { width: 2px; flex: 1; min-height: 2.5rem; }
+  .diagram-line-red { background: rgba(255, 77, 77, 0.3); }
+  .diagram-line-mint { background: rgba(152, 255, 217, 0.3); }
+  .diagram-label {
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .diagram-label-red { color: #ff6b6b; }
+  .diagram-label-mint { color: #98FFD9; }
+  .diagram-caption {
+    padding: 0.875rem 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: #71717a;
+    font-size: 0.8rem;
+  }
+
+  /* Callouts */
+  .callout-white {
+    text-align: center;
+    font-size: 1.55rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 2.5rem 0;
+    line-height: 1.3;
+  }
+  .quote-mint {
+    color: #98FFD9;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1.5rem 0;
+    line-height: 1.65;
+  }
+
+  /* Flowchart */
+  .flowchart-wrap {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    overflow-x: auto;
+  }
+  .fc-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    min-width: 320px;
+  }
+  .fc-title {
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #98FFD9;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .fc-primary-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+  }
+  .fc-primary { position: relative; width: 100%; }
+  .fc-no-exit {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  .fc-no-line {
+    width: 1.5rem;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+  }
+  .fc-no-label {
+    font-size: 0.55rem;
+    color: #71717a;
+    padding: 0 6px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+  }
+  .fc-no-box {
+    opacity: 0.6;
+    font-size: 0.6rem;
+    text-align: left;
+    white-space: nowrap;
+    padding: 8px;
+    width: auto;
+    max-width: none;
+  }
+  .fc-no-sub { font-weight: 400; color: #a1a1aa; }
+  .fc-yes-label {
+    font-size: 0.6rem;
+    color: #98FFD9;
+    font-weight: 700;
+    padding: 3px 0;
+  }
+  .fc-secondary { border-color: rgba(152, 255, 217, 0.4); }
+  .fc-fork-connector {
+    width: 2px;
+    height: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+  }
+  .fc-fork {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+  }
+  .fc-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .fc-hline {
+    position: absolute;
+    top: 0;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .fc-hline-right { right: -0.25rem; width: calc(50% + 0.25rem); }
+  .fc-hline-left { left: -0.25rem; width: calc(50% + 0.25rem); }
+  .fc-vline {
+    width: 2px;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+  }
+  .fc-vline-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.55rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .fc-vline-label-red { left: 100%; padding-left: 4px; color: #ff4d4d; }
+  .fc-vline-label-mint { right: 100%; padding-right: 4px; color: #98FFD9; }
+  .fc-arrow-spaced { margin-bottom: 0.5rem; }
+  .fc-branch-title {
+    text-transform: uppercase;
+    width: 100%;
+    max-width: none;
+  }
+  .fc-branch-title-red { color: #ff4d4d; }
+  .fc-branch-title-mint { color: #98FFD9; }
+  .fc-bio { width: 100%; }
+  .fc-bio ul { list-style: disc; padding-left: 1rem; }
+  .fc-bio li { font-size: 0.65rem; color: #a1a1aa; margin-top: 0.4rem; }
+  .bio-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    margin-bottom: 0.5rem;
+  }
+  .bio-title-red { color: #ff4d4d; text-decoration-color: rgba(255, 77, 77, 0.3); }
+  .bio-title-mint { color: #98FFD9; text-decoration-color: rgba(152, 255, 217, 0.3); }
+  .bio-arrow-red { color: #ff4d4d; font-weight: 700; }
+  .bio-arrow-mint { color: #98FFD9; font-weight: 700; }
+  .fc-branch-sub {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: none;
+  }
+  .fc-branch-sub-red { border-color: rgba(255, 77, 77, 0.3); }
+  .fc-branch-sub-mint { border-color: rgba(152, 255, 217, 0.3); color: #98FFD9; }
+  .fc-outcome-box {
+    font-size: 0.6rem;
+    color: #71717a;
+    font-style: italic;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+  .fc-outcome-red { border: 1px solid rgba(255, 77, 77, 0.2); }
+  .fc-outcome-mint {
+    border: 1px solid rgba(152, 255, 217, 0.2);
+    color: #fff;
+    font-weight: 500;
+  }
+  .fc-prophecy {
+    margin-top: 3rem;
+    padding: 0.875rem 1.5rem;
+    background: rgba(9, 9, 11, 0.5);
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #52525b;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .pulse-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #3f3f46;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .fc-citation {
+    text-align: right;
+    font-size: 0.6rem;
+    color: #71717a;
+    font-style: italic;
+    margin-top: 0.75rem;
+  }
+
+  /* Story grid */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin: 0 auto 2rem;
+    align-items: stretch;
+    max-width: 42rem;
+  }
+  .story-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+  .story-card p + p { margin-top: 0.75rem; }
+  .story-photo {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(9, 9, 11, 0.4);
+    padding: 0.5rem;
+  }
+  .story-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    opacity: 0.9;
+    display: block;
+  }
+  @media (max-width: 640px) {
+    .story-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Zones */
+  .zones-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .zone-block {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+  }
+  .zone-block-blue { border-color: rgba(96, 165, 250, 0.2); }
+  .zone-block-mint { border-color: rgba(152, 255, 217, 0.2); }
+  .zone-block-red { border-color: rgba(255, 77, 77, 0.2); }
+  .zone-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .zone-name {
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .zone-name-blue { color: #60a5fa; }
+  .zone-name-mint { color: #98FFD9; }
+  .zone-name-red { color: #ff4d4d; }
+  .zone-badge {
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  .zone-badge-blue { background: rgba(96, 165, 250, 0.1); color: #60a5fa; }
+  .zone-badge-mint { background: rgba(152, 255, 217, 0.1); color: #98FFD9; }
+  .zone-badge-red { background: rgba(255, 77, 77, 0.1); color: #ff4d4d; }
+  .zone-lead {
+    color: #d4d4d8;
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  .zone-strong-blue { color: #60a5fa; }
+  .zone-strong-mint { color: #98FFD9; }
+  .zone-strong-red { color: #ff4d4d; }
+  .zone-bullets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    list-style: disc;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    color: #a1a1aa;
+    margin-bottom: 1.25rem;
+  }
+  .zone-bullets li { margin: 0; }
+  .zone-detail {
+    padding: 1rem;
+    background: rgba(9, 9, 11, 0.5);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+    color: #a1a1aa;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  .zone-detail-strong { color: #fff; font-weight: 500; }
+  .zone-detail p + p { margin-top: 0.5rem; }
+  .zone-reveals {
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    color: #71717a;
+  }
+  .zone-reveals-key { color: #fff; }
+
+  /* CTA */
+  .cta-section {
+    border-radius: 1.75rem;
+    border: 1px solid rgba(152, 255, 217, 0.2);
+    background: rgba(10, 10, 10, 0.65);
+    padding: 4rem 3rem;
+    text-align: center;
+    box-shadow: 0 0 70px rgba(152, 255, 217, 0.06);
+  }
+  .cta-section h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+  }
+  .cta-body {
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 36rem;
+    margin: 0 auto 2.5rem;
+  }
+  .cta-body p + p { margin-top: 1rem; }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .cta-section { padding: 2.5rem 1.5rem; }
+    .callout-white { font-size: 1.3rem; }
+    .fc-fork { gap: 0.5rem; }
+    .zone-block { padding: 1.5rem; }
+  }
+</style>

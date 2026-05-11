@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionTag from "../../components/SectionTag.astro";
+import { getAllPosts, formatDate } from "../../content/posts";
+
+const posts = getAllPosts();
+---
+<BaseLayout
+  title="Writing | Limitless Potentia"
+  description="Essays on the internal mechanism that governs performance under pressure. For founders, senior leaders, and high performers."
+>
+  <section class="max-w-4xl mx-auto px-6 pt-40 pb-12 text-center">
+    <SectionTag label="The Writing" />
+    <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[1.05]">
+      The <span class="text-mint italic">Mechanism</span>
+    </h1>
+    <p class="text-zinc-400 text-lg max-w-2xl mx-auto leading-relaxed">
+      Essays on the calculation your system is running underneath every decision — and what it
+      costs when the calibration drifts.
+    </p>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-6 pb-32">
+    <div class="space-y-6">
+      {posts.map((post) => (
+        <a
+          href={`/blog/${post.slug}`}
+          class="block p-8 md:p-10 card-blur hover:border-mint/30 transition-colors duration-300 group no-underline"
+        >
+          <div class="flex items-center gap-3 mb-5 text-xs uppercase tracking-widest">
+            {post.tag && <span class="text-mint font-bold">{post.tag}</span>}
+            {post.tag && <span class="text-zinc-700">•</span>}
+            <span class="text-zinc-600 font-medium">{formatDate(post.pubDate)}</span>
+            <span class="text-zinc-700">•</span>
+            <span class="text-zinc-600 font-medium">{post.readMinutes} min read</span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-black mb-4 tracking-tight group-hover:text-mint transition-colors">
+            {post.title}
+          </h2>
+          <p class="text-zinc-400 text-base leading-relaxed mb-6">{post.description}</p>
+          <span class="text-mint text-xs uppercase tracking-widest font-bold inline-flex items-center gap-2 group-hover:gap-3 transition-all">
+            Read essay
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
