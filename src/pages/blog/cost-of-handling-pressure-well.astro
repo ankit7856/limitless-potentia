@@ -11,22 +11,12 @@ const post = getPost("cost-of-handling-pressure-well")!;
   navCtaTarget="#contact"
   navCtaLabel="Book Your Audit"
 >
-  <section class="hero">
-    <div class="hero-icon">
-      <img src="/logo-small.svg" alt="Limitless Potentia" />
-    </div>
-    <div class="meta">{post.tag} · {formatDate(post.pubDate)} · {post.readMinutes} min read</div>
-    <h1>The Cost of Handling<br /><em>Pressure Well</em></h1>
-    <p class="subtitle">{post.description.split(".")[0]}.</p>
-    <div class="scroll-arrow" aria-hidden="true">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="12" y1="5" x2="12" y2="19"></line>
-        <polyline points="19 12 12 19 5 12"></polyline>
-      </svg>
-    </div>
-  </section>
-
   <main class="content">
+    <header class="post-header">
+      <div class="post-meta">{post.tag} · {formatDate(post.pubDate)} · {post.readMinutes} min read</div>
+      <h1>The Cost of Handling<br /><em>Pressure Well</em></h1>
+      <p class="post-desc">{post.description.split(".")[0]}.</p>
+    </header>
     <section class="content-section">
       <div class="body-copy">
         <p><strong class="em-white">You handle pressure well. You always have.</strong></p>
@@ -297,32 +287,11 @@ const post = getPost("cost-of-handling-pressure-well")!;
 </BaseLayout>
 
 <style>
-  /* Hero */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 8rem 1.5rem 4rem;
+  /* Post header */
+  .post-header {
+    margin-bottom: 4rem;
   }
-  .hero-icon {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(9, 9, 11, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0 30px rgba(152, 255, 217, 0.12);
-    margin-bottom: 2.5rem;
-  }
-  .hero-icon img { width: 2.5rem; height: 2.5rem; }
-  .hero .meta {
+  .post-meta {
     color: #71717a;
     font-size: 0.75rem;
     letter-spacing: 0.15em;
@@ -330,31 +299,24 @@ const post = getPost("cost-of-handling-pressure-well")!;
     font-weight: 700;
     margin-bottom: 1.25rem;
   }
-  .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
+  .post-header h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
     font-weight: 800;
     letter-spacing: -0.03em;
     line-height: 1.05;
-    margin-bottom: 1.5rem;
-    max-width: 54rem;
+    margin-bottom: 1.25rem;
   }
-  .hero h1 em { color: #98FFD9; font-style: italic; }
-  .hero .subtitle {
+  .post-header h1 em { color: #98FFD9; font-style: italic; }
+  .post-desc {
     color: #a1a1aa;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     max-width: 36rem;
     font-weight: 500;
     line-height: 1.6;
-    margin-bottom: 4rem;
-  }
-  .scroll-arrow { color: #98FFD9; animation: bounce-soft 2.5s ease-in-out infinite; }
-  @keyframes bounce-soft {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
   }
 
   /* Content layout */
-  .content { max-width: 48rem; margin: 0 auto; padding: 0 1.5rem 8rem; }
+  .content { max-width: 48rem; margin: 0 auto; padding: 7rem 1.5rem 8rem; }
   .content-section { margin-bottom: 6rem; }
   .body-copy { color: #d4d4d8; font-size: 1.1rem; line-height: 1.85; }
   .body-copy p + p { margin-top: 1.5rem; }

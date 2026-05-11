@@ -12,31 +12,19 @@ const post = getPost("the-mechanism")!;
   navCtaTarget="#contact"
   navCtaLabel="Get Your Custom Map"
 >
-  <!-- Hero -->
-  <section class="min-h-screen flex flex-col items-center justify-center px-6 text-center pt-24">
-    <div class="mb-10 relative">
-      <div
-        class="w-24 h-24 rounded-full border border-mint/20 bg-zinc-900/40 flex items-center justify-center overflow-hidden shadow-[0_0_30px_rgba(152,255,217,0.15)] relative backdrop-blur-md"
-      >
-        <img src="/logo-small.svg" alt="Limitless Potentia logo" class="w-12 h-12 text-mint drop-shadow-[0_0_10px_rgba(152,255,217,0.6)]" />
+  <main id="document-start" class="max-w-4xl mx-auto px-6 pt-28 pb-20">
+    <header class="mb-16">
+      <div class="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-5">
+        {post.tag} · {formatDate(post.pubDate)} · {post.readMinutes} min read
       </div>
-    </div>
-    <div class="text-xs uppercase tracking-widest text-zinc-500 font-bold mb-4">
-      {post.tag} · {formatDate(post.pubDate)} · {post.readMinutes} min read
-    </div>
-    <h1 class="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6 max-w-5xl leading-[1.05]">
-      You Handle Pressure Well.<br />
-      <span class="text-mint italic">Here's What It's Costing You.</span>
-    </h1>
-    <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mb-12 font-medium leading-relaxed">
-      The mechanism most senior leaders never see — <span class="text-white">until it's already compounded.</span>
-    </p>
-    <div class="flex flex-col sm:flex-row gap-5">
-      <CalButton label="Get Your Custom Map" size="md" />
-    </div>
-  </section>
-
-  <main id="document-start" class="max-w-4xl mx-auto px-6 py-20">
+      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6 max-w-4xl leading-[1.05]">
+        You Handle Pressure Well.<br />
+        <span class="text-mint italic">Here's What It's Costing You.</span>
+      </h1>
+      <p class="text-zinc-400 text-lg max-w-2xl font-medium leading-relaxed">
+        The mechanism most senior leaders never see — <span class="text-white">until it's already compounded.</span>
+      </p>
+    </header>
     <!-- Opening Narrative -->
     <article class="space-y-10 mb-32">
       <div class="space-y-8 text-zinc-300 text-xl leading-[1.6]">
