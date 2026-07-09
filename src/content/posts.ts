@@ -12,7 +12,7 @@ export const posts: Post[] = [
     slug: "the-mechanism",
     title: "Your System Under Pressure",
     description:
-      "The mechanism most senior leaders never see — until it's already compounded. Map the equation your brain runs on every decision, and the three zones it operates in.",
+      "The mechanism most senior leaders never see - until it's already compounded. Map the equation your brain runs on every decision, and the three zones it operates in.",
     pubDate: new Date("2025-10-20"),
     readMinutes: 18,
     tag: "Mechanism",
