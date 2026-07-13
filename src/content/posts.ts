@@ -21,8 +21,8 @@ export const posts: Post[] = [
     slug: "cost-of-handling-pressure-well",
     title: "The Cost of Handling Pressure Well",
     description:
-      "What high performers normalise that's quietly compounding. The variance, the mopping problem, and the pipe underneath your B-days.",
-    pubDate: new Date("2025-11-04"),
+      "What founders normalise that's quietly compounding. The variance, the mopping problem, and the pipe underneath your B-days.",
+    pubDate: new Date("2026-06-01"),
     readMinutes: 10,
     tag: "Founder Notes",
   },
