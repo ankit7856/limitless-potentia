@@ -23,7 +23,7 @@ export const posts: Post[] = [
     description:
       "What founders normalise that's quietly compounding. The variance, the mopping problem, and the pipe underneath your B-days.",
     pubDate: new Date("2026-06-01"),
-    readMinutes: 10,
+    readMinutes: 5,
     tag: "Founder Notes",
   },
 ];
